@@ -6,7 +6,7 @@ Thanks for visiting! <br />
 <br />
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/tinned_fish11.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/tinned_fish11.jpg" style="width: 100%; height: 200px; object-fit: cover; object-position: top;">
     <p>Discovering Santa Barbara's tinned fish selection</p>
   </div>
   <div style="text-align: center;">
