@@ -7,7 +7,7 @@
 >    *"the noise of babbling tourists"*
 > 
 > 2. (of flowing water) making a continuous murmuring sound.  
->    **"a gently babbling brook"**
+>    *"a gently babbling brook"*
 
 <br />
 
