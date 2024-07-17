@@ -6,15 +6,15 @@ Thanks for visiting! <br />
 <br />
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/tinned_fish11.jpg" style="width: 100%; height: 275px; object-fit: cover; object-position: top;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/tinned_fish11.jpg" style="width: 100%; height: 290px; object-fit: cover; object-position: top;">
     <p>Discovering Santa Barbara's tinned fish selection</p>
   </div>
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/weird_horse.jpg" style="width: 100%; height: 275px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/weird_horse.jpg" style="width: 100%; height: 290px; object-fit: cover;">
     <p>A funny looking horse</p>
   </div>
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/charliexcx_nerd.jpg" style="width: 100%; height: 275px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/charliexcx_nerd.jpg" style="width: 100%; height: 290px; object-fit: cover;">
     <p>Charli XCX Brat appreciation</p>
   </div>
 </div>
