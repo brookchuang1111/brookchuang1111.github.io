@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <!--- favicon ---> 
   <link rel="shortcut icon" type="image/png" href="{{ "/images/letter_nb.jpg" | https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/images/letter_nb.jpg }}">
@@ -35,4 +36,18 @@
 
   <script type="text/javascript"> hljs.highlightAll(); </script>
   <!-- end highlight.js support -->
+  <style>
+    .site-title {
+      font-weight: bold;
+    }
+  </style>
 </head>
+
+<header>
+  <h1 class="site-title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+</header>
+
+<!-- Other content of your header.html file -->
+
+</body>
+</html>
