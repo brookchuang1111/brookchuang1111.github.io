@@ -1,9 +1,3 @@
-Welcome weary traveler! I'm Brook and per this blog name welcome to my inner ramblings. <br />
-<br />
-I blog about what I've been learning in stats, math, algo trading, ect. <br />
-For fun check out my (soon to be written) poker and game theory notes. <br />
-Thanks for visiting! <br />
-<br />
 > ### babbling
 > **/ˈbab(ə)liNG/**
 > 
@@ -14,6 +8,14 @@ Thanks for visiting! <br />
 > 
 > 2. (of flowing water) making a continuous murmuring sound.  
 >    *"a gently babbling brook"*
+<br />
+<br />
+Welcome weary traveler! I'm Brook and per this blog name welcome to my inner ramblings. <br />
+<br />
+I blog about what I've been learning in stats, math, algo trading, ect. <br />
+For fun check out my (soon to be written) poker and game theory notes. <br />
+Thanks for visiting! <br />
+<br />
 <br />
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
