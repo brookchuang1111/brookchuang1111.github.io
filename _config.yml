@@ -5,6 +5,7 @@ description: "Hi I'm Brook! I'm majoring in data theory (math + stats) at UCLA. 
 email: "brookchuang[at]ucla[dot]edu"
 github_username: "brookchuang1111"
 linkedin_username: "Brook Chuang"
+  
 
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
@@ -13,6 +14,9 @@ theme: "minima"
 
 rss: rss
 
+social-links: 
+  Linkedin: www.linkedin.com/in/chuangbrook
+  
 kramdown:
   syntax_highlighter_opts:
     disable: true
