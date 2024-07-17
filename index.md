@@ -1,13 +1,13 @@
 > ### babbling
-> **/ˈbab(ə)liNG/**
-> 
-> **adjective**
+> */bab(ə)liNG/*
+>
+> *adjective*
 > 
 > 1. talking rapidly and continuously in a foolish, excited, or incomprehensible way.  
 >    *"the noise of babbling tourists"*
 > 
 > 2. (of flowing water) making a continuous murmuring sound.  
->    *"a gently babbling brook"*
+>    **"a gently babbling brook"**
 
 <br />
 
