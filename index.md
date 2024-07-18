@@ -11,9 +11,9 @@
 
 <br />
 
-Welcome weary traveler! I'm Brook and per this blog name welcome to my inner ramblings. <br />
+Hello world! I'm Brook and per this blog name welcome to my inner ramblings. <br />
 <br />
-I blog about what I've been learning in stats, math, algo trading, ect. <br />
+I write about what I've been learning in stats, math, trading, ect. <br />
 For fun check out my (soon to be written) poker and game theory notes. <br />
 Thanks for visiting! <br />
 
