@@ -162,6 +162,8 @@ $$R_n \leq 1 + C\sqrt{(n)}$$
 
 This bound is called the *worst-case, problem-free, or problem-independent* bound because it only depends on the horizon and class of bandits for which the algorithm is designed, not a specific instance of the class.  Without $\Delta \leq 1$ the worst case bound for ETC is $\infty$. 
 
+---
+
 ### The Bound in Action
 
   <div style="display: flex; justify-content: space-between;">
