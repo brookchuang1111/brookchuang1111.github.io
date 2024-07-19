@@ -22,19 +22,22 @@ Source material:
   </div>
 </div>
 
+
 ### The Cramer-Chernoff Method and Subgaussian Random Variables
 Before we can jump into the algorithm, we need to brush up on some assumptions and distributions. For the rest of this post, we assume that all bandit instances are $\xi_{SG}^k(1)$ where the reward distribution for all arms is 1-subgaussian.
 
 #### Definition of Subgaussianity 
 A random varibale $X$ is $\sigma$-subgaussian if for all $\lambda \in \mathbb{R}$ it holds that $\mathbb{E}\[ exp(\lambda X)\] \leq exp(\lambda^2\sigma^2/2)$.
 
-The sub-gaussian distribution has strong tail decay and can also be characterized by its variance proxy,
+The sub-gaussian distribution has strong tail decay and can also be characterized by its variance proxy[^1],
 
 $$\mathbb{E}{[}e^{(X-E{[}X{]}t}{]} \leq e^{\frac{s^2t^2}{2}}$$
 
 This property bounds the tails of the distribution implying that the random variable $X$ does not produce extreme outliers too frequently. For 1-subgaussian random variables, and in this context our reward distribution, this inequality holds for $\sigma = 1$. 
 
 Let's also define an important theorem that allows us to use the *Cramer-Chernoff method*.
+
+--- 
 
 **Theorem 2.1**
 
@@ -53,6 +56,8 @@ $$\begin{align}
 \end{align}$$
 
 We can choose $\lambda = \epsilon// \sigma^2$ to complete the inequality and proof. $\square$
+
+---
 
 All this notation and definition ultimately boils down to analyzing the bounds of the tails of $\hat{\mu} - \mu$. The last corollary for this section introduces two inequalities that are important when analyzing ETC.
 
@@ -76,13 +81,13 @@ where $\hat{\mu} = \frac{1}{n}\sum_{t=1}^{n}X_t$.
   </div>
 </div>
 
+
 Ok sorry, let's get back to the algorithm. ETC is characterized by the number of times it explores each arm, denoted $m$. Because there are $k$ actions, the total number of times ETC explores is $mk$ rounds until committing. The *average reward* is denoted as $\hat{\mu}_i(t)$ such that, 
 
 $$\hat{\mu_i}(t) = \frac{1}{T_i(t)} \sum_{s=1}^{t}I( A_s=i ) X_s$$
 
 The term $T_i(t) = \sum_{s=1}^{t}T{A_s=i}$ is the number of times action $i$ has been played after round $t$ where ties are broken arbitrarily. The policy is given as:
 
----
 1. ***Input*** $m$
 2. In round $t$ choose action
 
@@ -94,9 +99,9 @@ A_t =
 \end{cases}
 \end{equation*}$$
 
----
+Given this, we can bound our regret given our suboptimality gap $\Delta_i = \mu* - \mu_i$ and mean reward $\mu_i$[^2].
 
-Given this, we can bound our regret given our suboptimality gap $\Delta_i = \mu* - \mu_i$ and mean reward $\mu_i$[^1].
+---
 
 **Theorem 2.2**
 
@@ -133,6 +138,8 @@ $$\tag{2.3}
 
 Substitute $2.3$ into $2.1$ $R_n$ and $2.2$ $\mathbb{E}[T_i(n)]$ for the result. $\square$
 
+---
+
 Theorem $2.2$ exhibits the trade-off between exploration and exploitation. If $m$ is large then the policy explores for too long and the first term will be too large and we have some semblance of linear regret. If $m$ is too small, then the probability that the algorithm commits to the wrong arm will grow  and the second term becomes large. 
 
 So how do we choose $m$?
@@ -142,7 +149,7 @@ Assume that $k=2$ (we have two actions) and the first arm is optimal such that $
 $$\tag{2.4}
 R_n \leq m\Delta + (n-2m)\Delta exp(\frac{-m\Delta^2}{4}) \leq m\Delta + n\Delta exp(\frac{-m\Delta^2}{4})$$
 
-We can show that for a large $n$ the right-hand side of $2.4$ is minimized up to a possible rounding error[^2]; for this choice and any $n$, the regret is bounded by,
+We can show that for a large $n$ the right-hand side of $2.4$ is minimized up to a possible rounding error[^3]; for this choice and any $n$, the regret is bounded by,
 
 $$\tag{2.5}
 R_n \leq \Delta + C\sqrt{(n)}$$
@@ -157,7 +164,7 @@ This bound is called the *worst-case, problem-free, or problem-independent* boun
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/wsop_2010/post_assets/etc_bound.png" style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/wsop_2010/post_assets/etc_bound.png" style="width: 70%; height: 300px; object-fit: cover;">
     <p>The theoretical upper bound surprisingly close to the actual performance</p>
   </div>
 </div>
@@ -170,6 +177,7 @@ This is the simplest and what my PI calls the most "stupid" bandit algorithm. Bu
 
 Enough babbling from me, see you all in the next post! 
 
-[^1]: Review these concepts [here](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
-[^2]: A full decomposition and proof can be found on pg. 93 [here](https://tor-lattimore.com/downloads/book/book.pdf)
+[^1]: More about the variance proxy can be found [here](https://en.wikipedia.org/wiki/Sub-Gaussian_distribution)
+[^2]: Review these concepts [here](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
+[^3]: A full decomposition and proof can be found on pg. 93 [here](https://tor-lattimore.com/downloads/book/book.pdf)
 
