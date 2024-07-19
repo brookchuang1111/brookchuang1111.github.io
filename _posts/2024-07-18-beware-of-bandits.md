@@ -102,7 +102,7 @@ Here's some boring stuff I have to include because... *math*.
 Now let's introduce the *suboptimality gap*, also known as the *action gap* or *immediate regret* of action $a$, 
 
 $$\tag{1.3}
-T_a(t) = \sum_{s=1}^{t}I\{A_s = a\}$$
+T_a(t) = \sum_{s=1}^{t}I(A_s = a)$$
 
 We interpret $T_a(t)$ as the number of times action $a$ is chosen by the learner after the end of round $t$. $A_t$ inherits randomness from past observational randomness. 
 
