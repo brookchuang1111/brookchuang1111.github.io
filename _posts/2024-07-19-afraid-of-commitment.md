@@ -18,7 +18,7 @@ Source material:
 
 ## The Algorithm 
   <div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
     <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/commitment.png" style="width: 100%; height: 80px; object-fit: cover;">
     <p>To commit or to not commit?</p>
   </div>
@@ -77,7 +77,7 @@ where $\hat{\mu} = \frac{1}{n}\sum_{t=1}^{n}X_t$.
 ## The ETC Policy
 
   <div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
     <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/explore.png" style="width: 100%; height: 80px; object-fit: cover;">
     <p>To explore or to not explore that is the question</p>
   </div>
@@ -165,7 +165,7 @@ This bound is called the *worst-case, problem-free, or problem-independent* boun
 ### The Bound in Action
 
   <div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
     <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/etc_bound.png" style="width: 100%; height: 320px; object-fit: cover;">
     <p>The theoretical upper bound surprisingly close to the actual performance</p>
   </div>
