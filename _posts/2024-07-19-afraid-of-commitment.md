@@ -13,11 +13,13 @@ Note the prerequisite for this blog post:
 
 Source material:
 * [Bandit Algorithms](https://tor-lattimore.com/downloads/book/book.pdf)
+  
 ---
+
 ## The Algorithm 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src=https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/commitment.png style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/commitment.png style="width: 75%; height: 80px; object-fit: cover;">
     <p>To commit or to not commit?</p>
   </div>
 </div>
@@ -88,7 +90,7 @@ $$\hat{\mu_i}(t) = \frac{1}{T_i(t)} \sum_{s=1}^{t}I( A_s=i ) X_s$$
 
 The term $T_i(t) = \sum_{s=1}^{t}T{A_s=i}$ is the number of times action $i$ has been played after round $t$ where ties are broken arbitrarily. The policy is given as:
 
-1. ***Input*** $m$
+1. Input $m$
 2. In round $t$ choose action
 
 $$\begin{equation*}
