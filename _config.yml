@@ -36,4 +36,8 @@ defaults:
       path: ""
       type: post
     values:
-      tags: Other
+      tags: 
+      - Bandits
+      - Statistics / ML
+      - Poker 
+      - Game Theory 
