@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Gambling Addicts Love this One Game! The St. Petersburg Paradox 
+title: Gambling Addicts Love This One Game! The St. Petersburg Paradox 
 tags: Game Theory
 ---
-## Gambling Addicts Love this One Game! The St. Petersburg Paradox 
+## Gambling Addicts Love This One Game! The St. Petersburg Paradox 
 
-Let me set the scene. It's a Thursday night, 9:59 pm to be exact, and I'm death scrolling through Glassdoor reading through semi-snark of salty rejected interview candidates when I stumble on something interesting. Something called the St. Petersburg paradox. Huh.
+Let me set the scene. It's a Thursday night, 9:59 pm and I'm death scrolling through Glassdoor reading through semi-snark of salty rejected interview candidates when I stumble on something interesting. Among a long rant of technical grilling, someone drops something called the St. Petersburg paradox. Huh, now what could that be? 
 
 This is how I've found myself reading the [correspondence of old dead farts](https://web.archive.org/web/20210414011124/http://cerebro.xu.edu/math/Sources/NBernoulli/correspondence_petersburg_game.pdf); Nicolas Bernoulli and amalgamation of even older and stodgier men to be exact but that's neither here nor there. What's interesting is that they seem to be squabbling over the St. Petersburg Game.
 
 ## The Game
-The premise of the game is simple; given a fair coin,  the payoff for flipping heads is two dollars and the game is over. If we flip tails we stay and we get to flip the coin again, restarting the state of the game. If we flip the coin again and land on heads, then we get 4 dollars and leave the game. After each round, if we stay in the game, our payoff doubles and we take home $2^k$ dollars for some $k$ rounds. 
+The premise of the game is simple; given a fair coin, the payoff for flipping heads is two dollars and the game is over. If we flip tails we stay and we get to flip the coin again, restarting the state of the game. If we flip the coin again and land on heads, then we get 4 dollars and leave the game. After each round, if we stay in the game, our payoff doubles and we take home $2^k$ dollars for some $k$ rounds. 
 
 *What should our buy-in for the game be?*
 Our expected payoff is easy to calculate given that any heads or tails is $\frac{1}{2}$ and our reward doubles each time. Using the linearity of expectation we can add up each state of achieving payoffs for $k = 1, \dots, \infty$ rounds,
@@ -27,7 +27,7 @@ The *optimal* utility is the largest expected utility. We can consider the linea
 Using the expected utility theory axioms, one can come to the utility of the lottery,
 $$U_n = \sum_{m=1}^{n}u(2^m)\frac{1}{2^m} = n$$
 
-The optimal utility then corresponds with $n=\infty$ tosses such that $U_max = U_\infty$ where $n \rightarrow \infty$. 
+The optimal utility then corresponds with $n=\infty$ tosses such that $U_{max} = U_\infty$ where $n \rightarrow \infty$. 
 
 *Note: A quick recap of von Neumann-Morgenstern axioms*
 
@@ -43,6 +43,15 @@ There are four axioms of expected utility theory that represent a *rational* dec
   
 ## Generalizing the Game 
 We can generalize the formulation of the Bernoulli game into a set of lotteries $\{L_n\}$ such that $L_n = \{x_1, p_1 {|} x_2, p_2 {|} \dots {|} x_n, p_n {|} 0, p_n\}$ with some $x_m$ payoff and it's characterizing probability $p_m$. 
+
+With this generalization and the utility constructed, the optimal expected utility is $U_n = \sum_{m=1}^{n}u(x_m)p_m$. 
+
+**Theorem 1** 
+For each nonincreasing probabiltiy distirbtuion $p_m$ there exists nondecreasing utility functions $u(x_m)$ that $\forall m > m*$ one has the inequality,
+
+$$\frac{u(x_{m+1})p_{m+1}}{u(x_m)p_m} \geq 1$$
+
+By the ratio test (hello AP calc!!) the sequence $\{U_n\}$ diverges as $n \rightarrow \infty$. 
 
 
 
