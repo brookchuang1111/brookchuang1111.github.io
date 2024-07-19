@@ -1,11 +1,11 @@
 ---
 layout: post
-title: some witty title
+title: Gambling Addicts Love this One Game! The St. Petersburg Paradox 
 tags: Game Theory
 ---
-## 
+## Gambling Addicts Love this One Game! The St. Petersburg Paradox 
 
-Let me set the scene. It's a Thursday night, 9:59 pm to be exact, and I'm death scrolling through Glassdoor reading through semi-snark of salty rejected interview candidates when I stumble on something interesting. Someone comments about the St. Petersburg paradox. Huh.
+Let me set the scene. It's a Thursday night, 9:59 pm to be exact, and I'm death scrolling through Glassdoor reading through semi-snark of salty rejected interview candidates when I stumble on something interesting. Something called the St. Petersburg paradox. Huh.
 
 This is how I've found myself reading the [correspondence of old dead farts](https://web.archive.org/web/20210414011124/http://cerebro.xu.edu/math/Sources/NBernoulli/correspondence_petersburg_game.pdf); Nicolas Bernoulli and amalgamation of even older and stodgier men to be exact but that's neither here nor there. What's interesting is that they seem to be squabbling over the St. Petersburg Game.
 
@@ -24,20 +24,29 @@ Yet would one really sell their house to play such a game?
 ### Using Utility Theory
 The *optimal* utility is the largest expected utility. We can consider the linear utility that represents the payoffs $x$ of the game $u(x) = x$  and an affine utility function w.l.o.g. $u(x) = const + cx$ where $c$ is some monetary unit. 
 
+Using the expected utility theory axioms, one can come to the utility of the lottery,
+$$U_n = \sum_{m=1}^{n}u(2^m)\frac{1}{2^m} = n$$
+
+The optimal utility then corresponds with $n=\infty$ tosses such that $U_max = U_\infty$ where $n \rightarrow \infty$. 
+
 *Note: A quick recap of von Neumann-Morgenstern axioms*
+
 There are four axioms of expected utility theory that represent a *rational* decision maker. 
-1. **Completeness**: For every $A$ and $B$ either $A \preceq B$ or $A \succeq B$ or both.
+1. **Completeness**: For every $A$ and $B$ either $A \preceq B$ or $A \succeq B$ or both[^1].
     * This means we want either A over B, B over A, or indifferent between the two
 3. **Transitivity**: For every $A, B, C$ with $A \preceq B$ and $B \succeq C$ we must have $$A \preceq C$.
     * This means that our rational player chooses consistently.
 4. **Independence of irrelevant alternatives**: For every $A, B$ s.t. $A \preceq B$ the preference $pA+(1-p)C \preceq pB + (1-p)C$ hold for every $C$ and $p\in{[}0, 1{]}$.
     * Given three choices with one being irrelevant, the ordered preferences of choices stay the same
 6. **Continuity**: Let $A, B, C$ be lotteries with $A \preceq B \preceq C$. Then $B$ is equally preferred to $pA + (1-p)C$ for some $C$ and some $t\in{[}0, 1{]}$.
-    * If the player prefers $A$ to $B$ and $B$ to $C$, there is a combiantion $A$ to $C$ where choice $B$ is indifferent between two relaitons. 
+    * If the player prefers $A$ to $B$ and $B$ to $C$, there is a combiantion $A$ to $C$ where choice $B$ is indifferent between two relations.
+  
+## Generalizing the Game 
+We can generalize the formulation of the Bernoulli game into a set of lotteries $\{L_n\}$ such that $L_n = \{x_1, p_1 {|} x_2, p_2 {|} \dots {|} x_n, p_n {|} 0, p_n\}$ with some $x_m$ payoff and it's characterizing probability $p_m$. 
 
 
 
-[^1] These [pringle-duck-lip-looking inequalities](https://math.stackexchange.com/questions/669085/what-does-curly-curved-less-than-sign-succcurlyeq-mean) are generalized inequalities and can represent partial orderings. 
+[^1]:These [pringle-duck-lip-looking inequalities](https://math.stackexchange.com/questions/669085/what-does-curly-curved-less-than-sign-succcurlyeq-mean) are generalized inequalities and can represent partial orderings. 
 
 
 
