@@ -22,13 +22,14 @@ Before we can jump into the algorithm, we need to brush up on some assumptions a
 #### Definition of Subgaussianity 
 A random varibale $X$ is $\sigma$-subgaussian if for all $\lambda \in \mathbb{R}$ it holds that $\mathbb{E}\[ exp(\lambda X)\] \leq exp(\lambda^2\sigma^2/2)$.
 
-The sub-gaussian distribution has strong tail decay and can also be characterized (by its variance proxy,
+The sub-gaussian distribution has strong tail decay and can also be characterized by its variance proxy,
 
 $$\mathbb{E}{[}e^{(X-E{[}X{]}t}{]} \leq e^{\frac{s^2t^2}{2}}$$
 
 This property bounds the tails of the distribution implying that the random variable $X$ does not produce extreme outliers too frequently. For 1-subgaussian random variables, and in this context our reward distribution, this inequality holds for $\sigma = 1$. 
 
 Let's also define an important theorem that allows us to use the *Cramer-Chernoff method*.
+
 **Theorem 2.1**
 
 If $X$ is $\sigma$-subgaussian, then for any $\epsilon \geq 0$,
@@ -119,7 +120,30 @@ $$\tag{2.3} \mathbb{P}(\hat{\mu_i}(mk) - \mu_i - (\hat{mu_1}(mk) - \mu_1 \geq \D
 
 Substitute 2.3 into 2.1 $R_n$ and 2.2 $\mathbb{E}[T_i(n)]$ for the result. $\square$
 
-Theorem 2.2 exhibits the trade-off between exploration and exploitation. If $m$ is large then the policy explores for too long and the first term will be too large. If $m$ is too small, then the probability that the algorithm commits to the wrong arm will grow  and the second term becomes large. 
+Theorem 2.2 exhibits the trade-off between exploration and exploitation. If $m$ is large then the policy explores for too long and the first term will be too large and we have some semblance of linear regret. If $m$ is too small, then the probability that the algorithm commits to the wrong arm will grow  and the second term becomes large. 
+
+So how do we choose m?
+
+Assume that $k=2$ (we have two actions) and the first arm is optimal such that $\Delta_1 = 0$, we can abbreviate $\Delta= \Delta_2$. The bound given in 2.1 can be simplified to, 
+
+$$\tag{2.4}
+R_n \leq m\Delta + (n-2m)\Delta exp(\frac{-m\Delta^2}{4}) \leq m\Delta + n\Delta exp(\frac{-m\Delta^2}{4})$$
+
+We can show that for a large $n$ the right-hand side of 6.4 is minimized up to a possible rounding error[^2]; for this choice and any $n$, the regret is bounded by 
+
+$$\tag{2.5}
+R_n \leq \Delta + C\sqrt(n)$$
+
+where $C > 0$ is a unviersal constant and when $\Delta \leq 1$ it is often assumed 
+
+$$R_n \leq 1 + C\sqrt(n)$$
+
+This bound is called the *worst-case, problem-free, or problem independent* bound because it only depends on the horizon and class of bandits for which the algorithm is designed, not a specific instance of the class.  Without $\Delta \leq 1$ the worst case bound for ETC is $\infty$. 
+
+
+
 
 
 [^1]: Review these concepts [here](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
+[^2]: A full decomposition and proof can be found on pg. 93 [here](https://tor-lattimore.com/downloads/book/book.pdf)
+
