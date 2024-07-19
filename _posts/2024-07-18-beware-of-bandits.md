@@ -114,7 +114,7 @@ Now let's look at the dependence of the various quantities of policy $\pi$ and t
 For any policy $\pi$ and stochastic bandit environment $\mathcal{v}$ with countable $\mathcal{A}$ and horizon $n \in \mathbb{N}$ the regret $R_n$ of policy $\pi$ in $\mathcal{v}$ satisfies,
 
 $$\tag{1.4}
-R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}{\[}T_a(n){\]}$$
+R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}{[}T_a(n){]}$$
 
 This regret decomposition decomposes regret in terms of loss due to using each of the arms. This tells us that to keep the regret small the learned should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
 
