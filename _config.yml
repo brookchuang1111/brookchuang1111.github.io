@@ -10,6 +10,11 @@ linkedin_username: "chuangbrook"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
 theme: "minima"
 
 rss: rss
