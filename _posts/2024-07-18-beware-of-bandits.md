@@ -91,7 +91,7 @@ Here's some boring stuff I have to include because... *math*.
 
 **Lemma 1.3**
 
-* $R_n(\pi, \mathcal{v}) \geq 0$ for all policies $\pi$*
+* $R_n(\pi, \mathcal{v}) \geq 0$ for all policies $\pi$
 * the policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
 * if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
 
