@@ -11,7 +11,9 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
 > *An old bandit adage: A bell is a cup until it is struck.*
 > 
 > Colin Meloy
+
 ---
+
 ### Core Assumptions
 
 <figure>
