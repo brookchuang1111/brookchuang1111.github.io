@@ -1,20 +1,23 @@
 ## Beware of Bandits! 
+
 ### Stochastic Bandits and Their Assumptions 
 
 Welcome to my first-ever blog post! The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
 In this post, I'll hash over bandits, their properties, and some important assumptions we'll decompose under. 
-<br><br>
+
 Most of what I'm learning and the material I regurgitate comes from a holy grail book some affectionately coin as the [*Bandit Bible*](https://banditalgs.com). 
 Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything you need to know about bandit algorithms. However, as a cheeky plug, if you would like a shortened version with my annotations I reference when reviewing, keep on reading!
-<br><br>
+
 > *An old bandit adage: A bell is a cup until it is struck.*
 > 
 > Colin Meloy
 ---
 ### Core Assumptions
 
-<img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/Bandit.jpg" width="400" alt="A smooth criminal: Bandit Heeler">
-<p style="text-align: center;">A smooth criminal: Bandit Heeler</p>
+<figure>
+  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/Bandit.jpg" width="400" alt="A smooth criminal: Bandit Heeler">
+  <figcaption style="text-align: center;">A smooth criminal: Bandit Heeler</figcaption>
+</figure>
 
 #### Definition: Stochastic Bandits 
 
@@ -46,8 +49,10 @@ But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is
 
 ### The Regret 
 
-<img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/no_regrets.jpg" width="400" alt="No Regrets!">
-<p style="text-align: center;">No Regrets!</p>
+<figure>
+  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/no_regrets.jpg" width="400" alt="No Regrets!">
+  <figcaption style="text-align: center;">No Regrets!</figcaption>
+</figure>
 
 
 Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then we define our *expected or mean reward*[^4] given $P_a(x) as
