@@ -12,6 +12,12 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
 > Colin Meloy
 ---
 ### Core Assumptions
+<div style="text-align: center;">
+  <img src="<div style="text-align: center;">
+  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/Bandit.jpg" alt="A smooth criminal: Bandit Heeler" width="300"/>
+  <p>A smooth criminal: Bandit Heeler</p>
+</div>
+
 #### Definition: Stochastic Bandits 
 A stochastic bandit is a collection of distributions $\mathcal{v} = (P_a:a \in \mathcal{A})$, where $\mathcal{A}$ is the set of available actions. In this environment, we have two players: the learner and the environment. In this ecosystem the following actions and states exist: 
 
@@ -66,7 +72,27 @@ Lemma 1.3
 * if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
 
 ### Decomposing the Regret 
+Now let's introduce the *suboptimality gap*, also known as the *action gap* or *immediate regret* of action $a$, 
 
+$$
+\tag{1.3}
+T_a(t) = \sum_{s=1}&^{t}I\{A_s = a\}$$
+
+We interpret $T_a(t)$ as the number of times action $a$ is chosen by the learner after the end of round $t$. $A_t$ inherits randomness from past observational randomness. 
+
+Now let's look at the dependence of the various quantities of policy $\pi$ and the environment $\mathcal{v}$ is suppressed seen in Lemma 1.4. 
+
+Lemma 1.4
+For any policy $\pi$ and stochastic bandit environment $\mathcal{v}$ with countable $\mathcal{A}$ and horizon $n \in \mathbb{N}$ the regret $R_n$ of policy $\pi$ in $\mathcal{v}$ satisfies,
+
+$$\tag{1.4}
+R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}\[T_a(n)\]
+$$
+
+This regret decomposition decomposes regret in terms of loss due to using each of the arms. This tells us that to keep the regret small the learned should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
+
+---
+Yay! Now you know the bare bones of stochastic bandits, from how we formally define bandits to the introductions of decomposing regret. I'll be writing more blog posts about this topic so keep an eye out!
 
 
 [^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
