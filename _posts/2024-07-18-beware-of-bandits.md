@@ -83,7 +83,7 @@ $$\tag{1.2}
 R_n(\pi, \mathcal{v}) = n\mu*(\mathcal{v}) - \mathbb{E}[\sum_{t=1}^{n}X_t]$$
 
 The regret after $n$ time steps over the policy $\pi$ and bandit instance $\mathcal{v}$ is
-* $\mu^{\text{*}}(\mathcal{v})$: the *optimal reward term*
+* $\mu*(\mathcal{v})$: the *optimal reward term*
 * $\mathbb{E}[\sum_{t=1}^{n}X_t]$: the *total expected reward*
 
 Here's some boring stuff I have to include because... *math*.
