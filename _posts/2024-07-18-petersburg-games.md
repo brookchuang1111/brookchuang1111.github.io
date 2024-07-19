@@ -26,14 +26,18 @@ The *optimal* utility is the largest expected utility. We can consider the linea
 
 *Note: A quick recap of von Neumann-Morgenstern axioms*
 There are four axioms of expected utility theory that represent a *rational* decision maker. 
-1. **Completeness**
-2. **Transitivity**
-3. **Independence of irrelevant alternatives**
-4. **Continuity**
+1. **Completeness**: For every $A$ and $B$ either $A \preceq B$ or $A \succeq B$ or both.
+    * This means we want either A over B, B over A, or indifferent between the two
+3. **Transitivity**: For every $A, B, C$ with $A \preceq B$ and $B \succeq C$ we must have $$A \preceq C$.
+    * This means that our rational player chooses consistently.
+4. **Independence of irrelevant alternatives**: For every $A, B$ s.t. $A \preceq B$ the preference $pA+(1-p)C \preceq pB + (1-p)C$ hold for every $C$ and $p\in{[}0, 1{]}$.
+    * Given three choices with one being irrelevant, the ordered preferences of choices stay the same
+6. **Continuity**: Let $A, B, C$ be lotteries with $A \preceq B \preceq C$. Then $B$ is equally preferred to $pA + (1-p)C$ for some $C$ and some $t\in{[}0, 1{]}$.
+    * If the player prefers $A$ to $B$ and $B$ to $C$, there is a combiantion $A$ to $C$ where choice $B$ is indifferent between two relaitons. 
 
 
 
-
+[^1] These [pringle-duck-lip-looking inequalities](https://math.stackexchange.com/questions/669085/what-does-curly-curved-less-than-sign-succcurlyeq-mean) are generalized inequalities and can represent partial orderings. 
 
 
 
