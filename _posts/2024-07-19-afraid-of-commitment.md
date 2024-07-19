@@ -19,7 +19,7 @@ Source material:
 ## The Algorithm 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/commitment.png" style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/commitment.png" style="width: 75%; height: 80px; object-fit: cover;">
     <p>To commit or to not commit?</p>
   </div>
 </div>
@@ -78,7 +78,7 @@ where $\hat{\mu} = \frac{1}{n}\sum_{t=1}^{n}X_t$.
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/explore.png" style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/explore.png" style="width: 75%; height: 80px; object-fit: cover;">
     <p>To explore or to not explore that is the question</p>
   </div>
 </div>
@@ -166,7 +166,7 @@ This bound is called the *worst-case, problem-free, or problem-independent* boun
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/etc_bound.png" style="width: 70%; height: 320px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/etc_bound.png" style="width: 70%; height: 320px; object-fit: cover;">
     <p>The theoretical upper bound surprisingly close to the actual performance</p>
   </div>
 </div>
