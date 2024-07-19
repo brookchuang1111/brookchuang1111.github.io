@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beware of Bandits!"
+title: "Bad Bernoulli! Information Asymmetry in Bernoulli Bandits "
 tags: Bandits
 ---
 ## Bad Bernoulli! Information Asymmetry in Bernoulli Bandits 
