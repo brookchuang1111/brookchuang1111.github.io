@@ -19,7 +19,7 @@ Source material:
 ## The Algorithm 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/commitment.png" style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/commitment.png" style="width: 100%; height: 80px; object-fit: cover;">
     <p>To commit or to not commit?</p>
   </div>
 </div>
@@ -78,7 +78,7 @@ where $\hat{\mu} = \frac{1}{n}\sum_{t=1}^{n}X_t$.
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/explore.png" style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/explore.png" style="width: 100%; height: 80px; object-fit: cover;">
     <p>To explore or to not explore that is the question</p>
   </div>
 </div>
@@ -166,10 +166,11 @@ This bound is called the *worst-case, problem-free, or problem-independent* boun
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/etc_bound.png" style="width: 70%; height: 320px; object-fit: cover;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/etc_bound.png" style="width: 100%; height: 320px; object-fit: cover;">
     <p>The theoretical upper bound surprisingly close to the actual performance</p>
   </div>
 </div>
+
 
 The figure above shoes the expected regret of ETC when playing a Gaussian Bandit with $k=2$ (two actions) for means $\mu_1 = 0$ and $\mu_2 = -\Delta$. The horizon is set to $n = 1000$ and the suboptimality gap $\Delta \in \[0,1\]$. Each data point is the average of $10^5$ simulations (that's why there are no error bars). We can visually see that our constructed bound in Theorem $2.1$ is quite close. 
 
