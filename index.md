@@ -14,7 +14,7 @@
 Hello world! I'm Brook and per this blog name welcome to my inner ramblings. <br />
 <br />
 I write about what I've been learning in stats, math, trading, ect. <br />
-For fun check out my (soon to be written) poker and game theory notes. <br />
+For fun check out my (soon to be written) poker and game theory notes. <br /><br />
 Thanks for visiting! <br />
 
 <br />
@@ -30,6 +30,6 @@ Thanks for visiting! <br />
   </div>
   <div style="text-align: center;">
     <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/charliexcx_nerd.jpg" style="width: 100%; height: 300px; object-fit: cover;">
-    <p>Charli XCX Brat appreciation</p>
+    <p>Brat (or nerd?) summer!</p>
   </div>
 </div>
