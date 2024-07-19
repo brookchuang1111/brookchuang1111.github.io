@@ -38,8 +38,22 @@ So basically we know nothing...right? Well like everything in math, we can scoot
 
 But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is harder. By convention, we choose the *largest expected value of the reward distributions*[^3]. 
 
+### The Regret 
+<div style="text-align: center;">
+  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/no_regrets.jpg" alt="No Regrets!" width="300"/>
+  <p>No Regrets!</p>
+</div>
 
-[^1]: This dot represents a variable which the probability distribution is defined on. We replace this with any given specific action. 
+Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then 
+
+$$\tag{1.1}
+\mu_a(\mathcal{v}) = \int_{-\infty}^{\infty}xdP_a(x)$$
+
+
+
+
+
+[^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
 [^2]: The utility of a function is the outcome of our probability distribution (ie. our preference for one reward over the other).
 [^3]: Exceptions like variance and tail behavior are analyzed later. In general, this convention holds. 
 
