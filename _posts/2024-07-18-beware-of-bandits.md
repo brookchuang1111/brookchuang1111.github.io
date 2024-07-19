@@ -38,6 +38,8 @@ We also impose some assumptions on our environment:
 
 $\pi_t$ is essentially the function that provides the probability distribution over $A_t$ given some past action sequence $A_1, X_1, \dots, A_{t-1}, X_{t-1}$. Think of $\pi_t$ as the describing function that characterizes how the learner decides on an action at round $t$ based on historical rounds. 
 
+
+
 ### The Learning Objective
 
 Like any good self-optimizing student, the goal of the learner is to maximize the reward $X_t$ across the horizon $n$. This is a random quantity that depends on the interaction between the environment and player and interestingly enough is NOT an optimization problem. Why?
@@ -49,6 +51,8 @@ Like any good self-optimizing student, the goal of the learner is to maximize th
 So basically we know nothing...right? Well like everything in math, we can scoot some things around to adapt to this lack of information. To do this, we construct a *policy* that assumes this loss of information and *proves* that this loss is minimal anyway. 
 
 But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is harder. By convention, we choose the *largest expected value of the reward distributions*[^3]. 
+
+
 
 ### The Regret 
 
@@ -69,7 +73,7 @@ $$\tag{1.2}
 R_n(\pi, \mathcal{v}) = n\mu*(\mathcal{v}) - \mathbb{E}[\sum_{t=1}^{n}X_t]$$
 
 The regret after $n$ time steps over the policy $\pi$ and bandit instance $\mathcal{v}$ is
-* $\mu*(\mathcal{v})$: the *optimal reward term*
+* $\mu^{*}(\mathcal{v})$: the *optimal reward term*
 * $\mathbb{E}[\sum_{t=1}^{n}X_t]$: the *total expected reward*
 
 Here's some boring stuff I have to include because... *math*.
@@ -80,6 +84,8 @@ Here's some boring stuff I have to include because... *math*.
 * $R_n(\pi, \mathcal{v}) \geq 0$ for all policies $\pi$*
 * the policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
 * if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
+
+
 
 ### Decomposing the Regret
 
@@ -98,7 +104,7 @@ Now let's look at the dependence of the various quantities of policy $\pi$ and t
 For any policy $\pi$ and stochastic bandit environment $\mathcal{v}$ with countable $\mathcal{A}$ and horizon $n \in \mathbb{N}$ the regret $R_n$ of policy $\pi$ in $\mathcal{v}$ satisfies,
 
 $$\tag{1.4}
-R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}\[T_a(n)\]$$
+R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}{\[}T_a(n){\]}$$
 
 This regret decomposition decomposes regret in terms of loss due to using each of the arms. This tells us that to keep the regret small the learned should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
 
