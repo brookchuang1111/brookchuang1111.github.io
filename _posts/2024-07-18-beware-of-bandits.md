@@ -1,4 +1,8 @@
-## Beware of Bandits! 
+---
+layout: post
+title: "Beware of Bandits!"
+tags: Bandits Bandits Bandits 
+---
 
 ### Stochastic Bandits and Their Assumptions 
 
