@@ -19,7 +19,7 @@ Source material:
 ## The Algorithm 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/commitment.png" style="width: 100%; height: 80px; object-fit: cover;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/commitment.png" style="width: 100%; height: 80px; object-fit: cover; padding: 10px;">
     <p>To commit or to not commit?</p>
   </div>
 </div>
