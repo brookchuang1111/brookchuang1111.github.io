@@ -36,7 +36,10 @@ Like any good self-optimizing student, the goal of the learner is to maximize th
 
 So basically we know nothing...right? Well like everything in math, we can scoot some things around to adapt to this lack of information. To do this, we construct a *policy* that assumes this loss of information and *proves* that this loss is minimal anyway. 
 
+But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is harder. By convention, we choose the *largest expected value of the reward distributions*[^3]. 
 
 
 [^1]: This dot represents a variable which the probability distribution is defined on. We replace this with any given specific action. 
+[^2]: The utility of a function is the outcome of our probability distribution (ie. our preference for one reward over the other).
+[^3]: Exceptions like variance and tail behavior are analyzed later. In general, this convention holds. 
 
