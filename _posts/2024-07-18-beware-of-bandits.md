@@ -3,7 +3,7 @@ layout: post
 title: Beware of Bandits!
 tags: Bandits
 ---
-## "Beware of Bandits!"
+## Beware of Bandits!
 ### Stochastic Bandits and Their Assumptions 
 
 Welcome to my first-ever blog post! The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
