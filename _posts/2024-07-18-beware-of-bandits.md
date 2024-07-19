@@ -32,8 +32,9 @@ A stochastic bandit is a collection of distributions $\mathcal{v} = (P_a:a \in \
 * This interaction between learner and environment induces a probability measure on a sequence of outcomes $A_1, X_1, \dots, A_n, X_n$.
 
 We also impose some assumptions on our environment: 
-1. The conditional distribution of reward $X_t$ given our sequence of outcomes is $P_{A_t}$. Intuitively this makes sense as we sample our reward from $P_{A_t}$ in some round $t$. 
-2. Our action $A_t$  the player chooses from $\mathbb{R}$ is $\pi_t(\cdot |A_1, X_1, \dots, A_{t-1}, X_{t-1})$[^1]. $\pi_t$ where $t \in \{ 1, \dots, n \}$ is the sequence of probability kernels that characterize the learner.
+1. The conditional distribution of reward $X_t$ given our sequence of outcomes is $P_{A_t}$. Intuitively this makes sense as we sample our reward from $P_{A_t}$ in some round $t$.
+  
+2. Our action $A_t$  the player chooses from $\mathbb{R}$ is $\pi_t ( \cdot \| A_1, X_1, \dots, A_{t-1}, X_{t-1})$ [^1]. $\pi_t$ where $t \in \{ 1, \dots, n \}$ is the sequence of probability kernels that characterize the learner.
 
 $\pi_t$ is essentially the function that provides the probability distribution over $A_t$ given some past action sequence $A_1, X_1, \dots, A_{t-1}, X_{t-1}$. Think of $\pi_t$ as the describing function that characterizes how the learner decides on an action at round $t$ based on historical rounds. 
 
