@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beware of Bandits!"
-tags: Bandits Bandits Bandits 
+tags: Bandits
 ---
 
 ### Stochastic Bandits and Their Assumptions 
@@ -23,7 +23,7 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
     <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/Bandit.jpg" style="width: 100%; height: 300px; object-fit: cover;">
-    <p>Bandit Heeler a Smooth Criminal</p>
+    <p>Bandit Heeler Being a Smooth Criminal</p>
   </div>
 </div>
 
@@ -119,7 +119,7 @@ R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}{[}T_a(n){]}$$
 This regret decomposition decomposes regret in terms of loss due to using each of the arms. This tells us that to keep the regret small the learned should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
 
 ---
-Yay! Now you know the bare bones of stochastic bandits, from how we formally define bandits to the introductions of decomposing regret. I'll be writing more blog posts about this topic so keep an eye out!
+Yay! Now you know the bare bones of stochastic bandits, from how we formally define bandits to the introductions of decomposing regret. We can now delve into different algorithms and applications whcih I'll be writing soon! 
 
 
 [^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
