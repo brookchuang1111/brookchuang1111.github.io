@@ -12,13 +12,12 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
 > Colin Meloy
 ---
 ### Core Assumptions
-<div style="text-align: center;">
-  <img src="<div style="text-align: center;">
-  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/Bandit.jpg" alt="A smooth criminal: Bandit Heeler" width="300"/>
-  <p>A smooth criminal: Bandit Heeler</p>
-</div>
+
+<img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/Bandit.jpg" width="400" alt="A smooth criminal: Bandit Heeler">
+<p style="text-align: center;">A smooth criminal: Bandit Heeler</p>
 
 #### Definition: Stochastic Bandits 
+
 A stochastic bandit is a collection of distributions $\mathcal{v} = (P_a:a \in \mathcal{A})$, where $\mathcal{A}$ is the set of available actions. In this environment, we have two players: the learner and the environment. In this ecosystem the following actions and states exist: 
 
 * In an environment there are $t$ rounds such that $t \in \{ 1, \dots, n \}$.
@@ -34,6 +33,7 @@ We also impose some assumptions on our environment:
 $\pi_t$ is essentially the function that provides the probability distribution over $A_t$ given some past action sequence $A_1, X_1, \dots, A_{t-1}, X_{t-1}$. Think of $\pi_t$ as the describing function that characterizes how the learner decides on an action at round $t$ based on historical rounds. 
 
 ### The Learning Objective
+
 Like any good self-optimizing student, the goal of the learner is to maximize the reward $X_t$ across the horizon $n$. This is a random quantity that depends on the interaction between the environment and player and interestingly enough is NOT an optimization problem. Why?
 
 1. Maximizing rewards is a process built on incomplete information. We don't know the value of $n$ rounds we will need.
@@ -45,10 +45,10 @@ So basically we know nothing...right? Well like everything in math, we can scoot
 But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is harder. By convention, we choose the *largest expected value of the reward distributions*[^3]. 
 
 ### The Regret 
-<div style="text-align: center;">
-  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/no_regrets.jpg" alt="No Regrets!" width="300"/>
-  <p>No Regrets!</p>
-</div>
+
+<img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/no_regrets.jpg" width="400" alt="No Regrets!">
+<p style="text-align: center;">No Regrets!</p>
+
 
 Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then we define our *expected or mean reward*[^4] given $P_a(x) as
 
@@ -73,7 +73,8 @@ Here's some boring stuff I have to include because... *math*.
 * the policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
 * if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
 
-### Decomposing the Regret 
+### Decomposing the Regret
+
 Now let's introduce the *suboptimality gap*, also known as the *action gap* or *immediate regret* of action $a$, 
 
 $$\tag{1.3}
