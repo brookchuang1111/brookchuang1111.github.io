@@ -16,10 +16,7 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
 
 ### Core Assumptions
 
-<figure>
-  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/Bandit.jpg" width="400" alt="A smooth criminal: Bandit Heeler">
-  <figcaption style="text-align: center;">A smooth criminal: Bandit Heeler</figcaption>
-</figure>
+![A smooth criminal: Bandit Heeler](post_assets/Bandit.jpg)
 
 #### Definition: Stochastic Bandits 
 
@@ -56,10 +53,7 @@ But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is
 
 ### The Regret 
 
-<figure>
-  <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/7-18/post_assets/no_regrets.jpg" width="400" alt="No Regrets!">
-  <figcaption style="text-align: center;">No Regrets!</figcaption>
-</figure>
+![No Regrets!](post_assets/no_regrets.jpg)
 
 
 Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then we define our *expected or mean reward*[^4] given $P_a(x) as
