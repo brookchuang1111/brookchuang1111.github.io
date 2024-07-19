@@ -19,7 +19,7 @@ Source material:
 ## The Algorithm 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/commitment.png style="width: 75%; height: 80px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/commitment.png" style="width: 75%; height: 80px; object-fit: cover;">
     <p>To commit or to not commit?</p>
   </div>
 </div>
@@ -166,7 +166,7 @@ This bound is called the *worst-case, problem-free, or problem-independent* boun
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/wsop_2010/post_assets/etc_bound.png" style="width: 70%; height: 300px; object-fit: cover;">
+    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/blob/main/post_assets/etc_bound.png" style="width: 70%; height: 320px; object-fit: cover;">
     <p>The theoretical upper bound surprisingly close to the actual performance</p>
   </div>
 </div>
