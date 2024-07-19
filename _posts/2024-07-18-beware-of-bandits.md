@@ -44,16 +44,33 @@ But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is
   <p>No Regrets!</p>
 </div>
 
-Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then 
+Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then we define our *expected or mean reward*[^4] given $P_a(x) as
 
 $$\tag{1.1}
 \mu_a(\mathcal{v}) = \int_{-\infty}^{\infty}xdP_a(x)$$
 
+The regret of policy $\pi$ on bandit instance $\mathcal{v}$ is 
 
+$$\tag{1.2}
+R_n(\pi, \mathcal{v}) = n\mu*(\mathcal{v}) - \mathbb{E}[\sum_{t=1}^{n}X_t]$$
+
+The regret after $n$ time steps over the policy $\pi$ and bandit instance $\mathcal{v}$ is
+* $\mu*(\mathcal{v})$: the *optimal reward term*
+* $\mathbb{E}[\sum_{t=1}^{n}X_t]$: the *total expected reward*
+
+Here's some boring stuff I have to include because... *math*.
+
+Lemma 1.3
+* $R_n(\pi, \mathcal{v}) \geq 0$ for all policies $\pi$*
+* the policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
+* if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
+
+### Decomposing the Regret 
 
 
 
 [^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
 [^2]: The utility of a function is the outcome of our probability distribution (ie. our preference for one reward over the other).
 [^3]: Exceptions like variance and tail behavior are analyzed later. In general, this convention holds. 
+[^4]: We assume that the mean reward is finite and the $argmax_{a \in \mathcal{A}} is non-empty.
 
