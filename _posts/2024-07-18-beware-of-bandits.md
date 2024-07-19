@@ -125,5 +125,5 @@ Yay! Now you know the bare bones of stochastic bandits, from how we formally def
 [^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
 [^2]: The utility of a function is the outcome of our probability distribution (ie. our preference for one reward over the other).
 [^3]: Exceptions like variance and tail behavior are analyzed later. In general, this convention holds. 
-[^4]: We assume that the mean reward is finite and the $argmax_{a \in \mathcal{A}} is non-empty.
+[^4]: We assume that the mean reward is finite and the $argmax_{a \in \mathcal{A}}$ is non-empty.
 
