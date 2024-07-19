@@ -72,7 +72,7 @@ But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is
 
 
 
-Unlike the tattoo artist in the above Snickers commercial, pay attention! Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then we define our *expected or mean reward*[^4] given $P_a(x) as
+Unlike the tattoo artist in the above Snickers commercial, bandit's have regrets! Many of them to be precise. Regret is a central principle of bandits and is how we measure the performance of bandit algorithms. In the most basic terms regret is the deficit suffered by the learner relative to the optimal policy. If, by earlier definitions, $\mathcal{v} = (P_a: a \in \mathcal{A})$ is a stochastic bandit, then we define our *expected or mean reward*[^4] given $P_a(x) as
 
 $$\tag{1.1}
 \mu_a(\mathcal{v}) = \int_{-\infty}^{\infty}xdP_a(x)$$
