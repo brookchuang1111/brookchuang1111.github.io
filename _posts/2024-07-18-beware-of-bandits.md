@@ -66,7 +66,9 @@ The regret after $n$ time steps over the policy $\pi$ and bandit instance $\math
 
 Here's some boring stuff I have to include because... *math*.
 
-Lemma 1.3
+
+**Lemma 1.3**
+
 * $R_n(\pi, \mathcal{v}) \geq 0$ for all policies $\pi$*
 * the policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
 * if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
@@ -74,15 +76,16 @@ Lemma 1.3
 ### Decomposing the Regret 
 Now let's introduce the *suboptimality gap*, also known as the *action gap* or *immediate regret* of action $a$, 
 
-$$
-\tag{1.3}
-T_a(t) = \sum_{s=1}&^{t}I\{A_s = a\}$$
+$$\tag{1.3}
+T_a(t) = \sum_{s=1}^{t}I\{A_s = a\}$$
 
 We interpret $T_a(t)$ as the number of times action $a$ is chosen by the learner after the end of round $t$. $A_t$ inherits randomness from past observational randomness. 
 
 Now let's look at the dependence of the various quantities of policy $\pi$ and the environment $\mathcal{v}$ is suppressed seen in Lemma 1.4. 
 
-Lemma 1.4
+
+**Lemma 1.4**
+
 For any policy $\pi$ and stochastic bandit environment $\mathcal{v}$ with countable $\mathcal{A}$ and horizon $n \in \mathbb{N}$ the regret $R_n$ of policy $\pi$ in $\mathcal{v}$ satisfies,
 
 $$\tag{1.4}
