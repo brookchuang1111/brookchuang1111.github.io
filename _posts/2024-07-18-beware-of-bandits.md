@@ -33,7 +33,7 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
 A stochastic bandit is a collection of distributions $\mathcal{v} = (P_a:a \in \mathcal{A})$, where $\mathcal{A}$ is the set of available actions. In this environment, we have two players: the learner and the environment. In this ecosystem the following actions and states exist: 
 
 * In an environment there are $t$ rounds such that $t \in \{ 1, \dots, n \}$.
-    - The *horizon* n, or total encompassing rounds, is finite (sometimes we allow $n=\inf$). 
+    - The *horizon* n, or total encompassing rounds, is finite (sometimes we allow $n=\infty$). 
 * On each round a learner chooses an action $A_t \in \mathcal{A}$.
 * The environment then samples a reward $X_t \in \mathbb{R}$ from distribution $P_{A_t}$ and reveals the reward $X_t$ to the learner.
 * This interaction between learner and environment induces a probability measure on a sequence of outcomes $A_1, X_1, \dots, A_n, X_n$.
