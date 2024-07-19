@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beware of Bandits!"
+title: Beware of Bandits!
 tags: Bandits
 ---
 ## "Beware of Bandits!"
