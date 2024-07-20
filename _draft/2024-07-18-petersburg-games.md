@@ -95,9 +95,27 @@ Pertaining to the Bernoulli game, the choice of the decision making is not deter
 
 ## Probabilistic Preference Criterion 
 
-A probabilistic preference criterion is characterized by the idea of having one choice being preferred over the other. THis manifests into three main principles:
+A probabilistic preference criterion is characterized by the idea of having one choice being preferred over the other. This manifests into three main principles:
 
-1. 
+1. **Probabilistic Preferences**: Preferences are expressed in terms of the likelihood that one option is preferred over the other.
+2. **Preference Probability**: For any two choices there exists a preference probability $P(A \succ B)$ where $A$ is preferred over $B$.
+3. **Utility**: utility distributions are used to derive preference probabilities.
+
+Ok, that was a lot! But now we can finally construct the approach. Given that we have a set of lotteries {$ L_n: n = 2, 2, \dots$} we have a corresponding sequence {$U_n = U(L_n):n = 1, 2, \dots$} of their expected utility. 
+
+We represent the infinity lottery by tending $n$ to infinity, $n \rightarrow \infity$. Given our conclusion of a probabilistic preference criterion, we use stochastic preferences to define three definitions, 
+
+**Definition 1**
+
+The lottery $L_i$ is sotchastically preferred to $L_j$ iff 
+$$\tag{1}p(L_i) > P(L_j)$$ for some $L_i \succ L_j$
+
+**Definition 2**
+
+The lotteries $L_i$ and $L_j$ are stochastically indifferent iff 
+$$p(L_i) = p(L_j)$$ for 
+**Definition 3**
+
 
 
 [^1]: These [pringle-duck-lip-looking inequalities](https://math.stackexchange.com/questions/669085/what-does-curly-curved-less-than-sign-succcurlyeq-mean) are generalized inequalities and can represent partial orderings.
