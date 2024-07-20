@@ -101,27 +101,50 @@ A probabilistic preference criterion is characterized by the idea of having one 
 2. **Preference Probability**: For any two choices there exists a preference probability $P(A \succ B)$ where $A$ is preferred over $B$.
 3. **Utility**: utility distributions are used to derive preference probabilities.
 
-Ok, that was a lot! But now we can finally construct the approach. Given that we have a set of lotteries {$ L_n: n = 2, 2, \dots$} we have a corresponding sequence {$U_n = U(L_n):n = 1, 2, \dots$} of their expected utility. 
+Ok, that was a lot! But now we can finally construct the approach. Given that we have a set of lotteries { $L_n: n = 1, 2, \dots$ } we have a corresponding sequence { $U_n = U(L_n):n = 1, 2, \dots$ } of their expected utility. 
 
-We represent the infinity lottery by tending $n$ to infinity, $n \rightarrow \infity$. Given our conclusion of a probabilistic preference criterion, we use stochastic preferences to define three definitions, 
+We represent the infinity lottery by tending $n$ to infinity, $n \rightarrow \infty$. Given our conclusion of a probabilistic preference criterion, we use stochastic preferences to define three definitions, 
 
 **Definition 1**
 
 The lottery $L_i$ is sotchastically preferred to $L_j$ iff 
-$$\tag{1}p(L_i) > P(L_j)$$ for some $L_i \succ L_j$
+$$\tag{1} p(L_i) > P(L_j)$$ for some $L_i \succ L_j$
 
 **Definition 2**
 
 The lotteries $L_i$ and $L_j$ are stochastically indifferent iff 
-$$p(L_i) = p(L_j)$$ for 
+$$\tag{2} p(L_i) = p(L_j)$$ for $L_i \sim L_j$
+
 **Definition 3**
 
+the lottery $L_{n_opt}$ is stochastically optimal iff 
+$$\tag{3} p(L_{n_opt}) = sup_n p(L_n)$
+
+This stochastically optimal lottery pick corresponds to the maximum lottery probability. 
+
+#### Kullback-Leibler information functional 
+This is where stuff gets weird and mostly super dry. I'm just going to spit out some theorems and hope they stick to something. The intuition behind these theorems are more important more than anything, but it's good to just have these equations here just in case. 
+
+**Theorem 2**
+
+The probability distribution $p(L_n): n = 1, 2, \dots, N$ defined as the minimizer of the Kulback_Leibler information function
+
+$$
+I_n(p) = \sum_{i=1}^{N}p(L_n)ln\frac{p(L_n)}{p_0(L_n)} + \alpha \Bigl( 1-\sum_{n=1}^N p(L_n) \Bigr) + \beta \Bigl( U-\sum_{n=1}^N p(L_n)U_n \Bigr) 
+$$
+
+which can be read as,
+$$
+p(L_n) = \frac{p_0(L_n)e^{\beta U_n}}{\sum_{n=1}^\infty p_0(L_n)e^{\beta U_n}}
+$$
+
+This minimization of the Kullback-Leiber information functional is equivalent to the minimization of the Kullback-Leiber relative entropy[^4]. When we minimize this, we get a finite index set $n = 1, 2\dots, N$ and a infinite index set.   
 
 
 [^1]: These [pringle-duck-lip-looking inequalities](https://math.stackexchange.com/questions/669085/what-does-curly-curved-less-than-sign-succcurlyeq-mean) are generalized inequalities and can represent partial orderings.
-
 [^2]: We assume that the probability measure is normalized, $\sum_{m=1}^n p_m + p_n = 1$
 [^3]: $m*$ denoting some critical index  
+[^4]: Learn more about this [here](https://en.wikipedia.org/wiki/Kullback–Leibler_divergence)
 
 
 
