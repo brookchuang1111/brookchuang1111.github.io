@@ -66,7 +66,7 @@ We can define a utility function $\forall m > m*[^3],
 
 $$\frac{u(x_{m+1})p_{m+1}}{u(x_m)p_m} \geq 1$$
 
-By the ratio test (hello AP calc!!)[^3] the sequence $\{U_n\}$ diverges as $n \rightarrow \infty$. $\square$
+By the ratio test (hello AP calc!!)[^4] the sequence $\{U_n\}$ diverges as $n \rightarrow \infty$. $\square$
 
 ---
 
@@ -138,13 +138,14 @@ $$
 p(L_n) = \frac{p_0(L_n)e^{\beta U_n}}{\sum_{n=1}^\infty p_0(L_n)e^{\beta U_n}}
 $$
 
-This minimization of the Kullback-Leiber information functional is equivalent to the minimization of the Kullback-Leiber relative entropy[^4]. When we minimize this, we get a finite index set $n = 1, 2\dots, N$ and a infinite index set.   
+This minimization of the Kullback-Leiber information functional is equivalent to the minimization of the Kullback-Leiber relative entropy[^5]. When we minimize this, we get a finite index set $n = 1, 2\dots, N$ and an infinite index set.   
 
 
 [^1]: These [pringle-duck-lip-looking inequalities](https://math.stackexchange.com/questions/669085/what-does-curly-curved-less-than-sign-succcurlyeq-mean) are generalized inequalities and can represent partial orderings.
 [^2]: We assume that the probability measure is normalized, $\sum_{m=1}^n p_m + p_n = 1$
 [^3]: $m*$ denoting some critical index  
-[^4]: Learn more about this [here](https://en.wikipedia.org/wiki/Kullback–Leibler_divergence)
+[^4]: Learn more about the ratio test [here](https://en.wikipedia.org/wiki/Ratio_test)
+[^5]: Learn more about this [here](https://en.wikipedia.org/wiki/Kullback–Leibler_divergence)
 
 
 
