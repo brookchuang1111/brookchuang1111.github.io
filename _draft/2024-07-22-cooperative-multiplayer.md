@@ -48,7 +48,12 @@ $\eta_a$ is not indexed by the player $i$ becuase each player contributes to the
 While each player will likely have different rewards, the rewards are iid and the regret will therefore be the same across all players. 
 This paper uses the the suggested lower regret bound $O(logT)$ for the multi-player decentralized learning algorithm with the same regret order. 
 
-*INSERT ASYMMETRY*
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/asymmetry.png" style="width: 100%; height: 300px; object-fit: cover;">
+    <p></p>
+  </div>
+</div>
 
 ---
 
@@ -81,15 +86,32 @@ To deal with information asymmetry, all players will maintain a desired set that
 
 A joint action is *considered* if it is the arm in the desired set that supposed to be pulled given the order that was agreed by all players. We denote this joint action in the desired action as $c$. If there is $l$ joint actions $c_1, \dots, c_l$ then the ordering of the desired set can be viewed by the following flow chart as, 
 
-*INSERT FLOW1*
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/flow1.png" style="width: 100%; height: 300px; object-fit: cover;">
+    <p></p>
+  </div>
+</div>
 
 A joint arm is *eliminated* from the set if it does not fall within the UCB interval and is disjoint from another arm. Player $i$ effectively "communicates" this elimination to the other players by not pulling $c_t[i]$; the other players will also eliminate this arm from their desired set while maintaining order. *Pulling a joint arm is not considered the same as removing a considered arm from a set.*
 
 The net flow can be visualized as,
 
-*INSERT FLOW2* 
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/flow2.png" style="width: 100%; height: 300px; object-fit: cover;">
+    <p></p>
+  </div>
+</div>
 
 ### Run-through Example 
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/algo.png" style="width: 100%; height: 80px; object-fit: cover;">
+    <p></p>
+  </div>
+</div>
 
 Consider a two-player setting where each player has two arms. We will represent each joint as as a matrix where each cell is the UCB interval defined in equation $4$ (general visualization of the player environment can be seen in figure 1). 
 
@@ -139,7 +161,7 @@ $$
 
 **Theorem 2**
 
-For any choices of $gamma > 0$ the gap-independent regret bound of algorithm 16 is
+For any choices of $gamma > 0$ the gap-independent regret bound of algorithm 1 is
 
 $$
 R_T = O(\sqrt{KTlog(T)})
