@@ -3,23 +3,27 @@ layout: post
 title: " "
 tags: Bandits
 ---
-## ""
+## 
 
+Today we'll be looking at a specific problem that pertains to multi-player bandits. I'll be reviewing and summarizing a research paper that describes the mUCB-Interval algorithm. This algorithm exists in the field of reinforcement learning and implements exploration-exploitation tradeoffs under different parameters compared to the ETC algorithm.
 
+With two or more players, information asymmetry and ,in extension, reward asymmetry occurs. We'll be looking at how we tackle such imbalances and how we can still achieve *desired sets*. 
 
 Prerequisite Posts:
-* []()
+* [Beware of Bandits!](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
+
 Source Material: 
 * [Optimal Cooperative Multiplayer Learning Bandits with Noist Rewards and No Communicaiton](https://arxiv.org/pdf/2311.06210)
-
+* [Bandit Algorithms](https://tor-lattimore.com/downloads/book/book.pdf)
+  
 ---
 
 ## Review of Regret and Reward
-Although we looked at regret and rewards in *Beware of Bandits*, I'll reiterate some information that William has put in slightly different terminology compared to the *Bandits Bible*.  
+Although we looked at regret and rewards in *Beware of Bandits*, I'll reiterate some terminology that William, my PI, has put in slightly different notation.
 
 **Joint Action**
 
-Consider a set of $M$ players $P_1, \dots P_n$ in which player $P_i$ has a set of $\mathcal{K}$ of $K_i$ arms to pick from. At each round,  a player can pick an arm independently and simultaneously from other players from their set of $\mathcal{K}_i$. 
+Consider a set of $M$ players $P_1, \dots P_n$ in which player $P_i$ has a set of $\mathcal{K}$ of $K_i$ arms to pick from. At each round, a player can pick an arm independently and simultaneously from other players from their set of $\mathcal{K}_i$. 
 This joint action can be represented as a $M$-tuple of arms picked and denoted by $a = (a_1\dots a_M)$[^1]. 
 
 This generates $M$ iid random rewards $X_a^i \in$[0,1] with $i \in$ [M] from a 1-subgaussian distribtuion $F_a$ with mean $\mu_a$. 
@@ -99,7 +103,7 @@ The net flow can be visualized as,
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/flow2.png" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/flow2.png" style="width: 100%; height: 200px; object-fit: cover;">
     <p></p>
   </div>
 </div>
@@ -108,8 +112,8 @@ The net flow can be visualized as,
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/algo.png" style="width: 100%; height: 80px; object-fit: cover;">
-    <p></p>
+    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/algo.png" style="width: 100%; height: 200px; object-fit: cover;">
+    <p>Figure 1: mUCB-Interval Algorithm</p>
   </div>
 </div>
 
@@ -179,7 +183,7 @@ where $\eta_a(T)$ is the number of times the arm $a$ has been pulled up to round
 
 **Lemma 5** 
 
-Under the event $G$ \cap G^{cross}_a$, the number of pulls of arm $a$ is at most $u_a$.[^4]
+Under the event $G \cap G^{cross}_a$, the number of pulls of arm $a$ is at most $u_a$.[^4]
 
 ---
 
