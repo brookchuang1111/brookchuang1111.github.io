@@ -52,7 +52,7 @@ This paper uses the the suggested lower regret bound $O(logT)$ for the multi-pla
 
 ---
 
-## Main Results
+## Main Results of mUCB-Intervals 
 
 ### The UCB Index 
 To maximize the cumulative rewards we define the *UCB index, also known as the Upper COndifence Bound for each joint action. The player's objective is to pull the largest UCB index as often as possible. For each player $i$ we can define the UCB index as,
@@ -128,6 +128,34 @@ For round $t=6$, the next considered arm is $(1, 2)$ and the process repeats unt
 ---
 
 ## Regret Bound Analysis 
+
+**Theorem 1**
+
+For any choices of tuning parameter $\gamma > 0$, the gap dependent of algorithm mUCB-Intervals is 
+
+$$
+R_t = O\Bigl( \Bigl( \sum_{a \in \mathcal{A}} \frac{1}{\Delta_a} \Bigr) logT + MK^2)
+$$
+
+**Theorem 2**
+
+For any choices of $gamma > 0$ the gap-independent regret bound of algorithm 16 is
+
+$$
+R_T = O(\sqrt{KTlog(T)})
+$$
+
+**Lemma 4** 
+
+ith regret defined by equation $1$< the regret decomposition for player $i$ follows,
+
+$$
+R_T^i = \sum_a \Delta_a\mathbb{E}(\eta_a(T))
+$$
+
+where $\eta_a(T)$ is the number of times the arm $a$ has been pulled up to round $T$. 
+
+
 
 
 
