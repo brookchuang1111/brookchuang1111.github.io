@@ -155,12 +155,22 @@ $$
 
 where $\eta_a(T)$ is the number of times the arm $a$ has been pulled up to round $T$. 
 
+**Lemma 5** 
 
+Under the event $G$ \cap G^{cross}_a$, the number of pulls of arm $a$ is at most $u_a$.[^4]
 
+---
+
+The paper I reviewed written by my PI [William Chang](https://williamc.me) introduces a cooperative multiplayer bandit learning problem where players are only allowed to agree on a strategy beforehand but can not communicate during the learning process. Each player receives a noisy version of the reward that cannot be shared with other players. mUCB-Intervals based on upper and lower confidence bounds scaled by $\gamma$ can be used to select optimal actions despite asymmetry. This asymmetry can be ultimately removed and be used to derive an algorithm that gives asymptotically optimal regret. 
+
+Super interesting stuff! This is just a quick overlay of a research paper, but other posts on my blog delve deeper on specific problems that arise given asymmetry. 
+
+I'll stop babbling - until next time! 
 
 
 [^1]: Where $a$ is a vector.
 [^2]: Expected regret does not actually depend on the value of the reward received but the differences in expected reward. 
 [^3]: More on Hoeffding's inequality [here](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality). 
+[^4]: More on the proof of Lemma 5 can be found on [pg. 8](https://arxiv.org/pdf/2311.06210)
 
 
