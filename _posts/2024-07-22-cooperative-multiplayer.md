@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Multi-player Fun: Information Asymmetry and Noisy Rewards"
+title: "The More the Merrier: Multi-Player Bandit Information Asymmetry"
 tags: Bandits
 ---
-## Multi-player Fun: Information Asymmetry and Noisy Rewards
+## The More the Merrier: Multi-Player Bandit Information Asymmetry
 
 Today we'll be looking at a specific problem that pertains to multi-player bandits. I'll be reviewing and summarizing a research paper that describes the mUCB-Interval algorithm. This algorithm exists in the field of reinforcement learning and implements exploration-exploitation tradeoffs under different parameters compared to the ETC algorithm.
 
