@@ -35,10 +35,10 @@ All players can determine a strategy and know the joint action space beforehand.
 
 **Regret**
 
-The *optimal arm* among all arm tuples is denoted as $\Delta_a = \mu*-\mu_a$ where $\mu*$ is the *highest reward mean*. The goal of these players is to pull the optimal arm as often as possible. 
+The *optimal arm* among all arm tuples is denoted as $\Delta _a = \mu*-\mu_a$ where $\mu*$ is the *highest reward mean*. The goal of these players is to pull the optimal arm as often as possible. 
 
 Let $a_t(i) \in (1, \dots K_i)$ be the arm chosen by player $i$ at time $t$ and deonte $a_t = (a_t(1), \dots, a_t(m))$. 
-For the players to pull the optimal arm, the high-level strategy is to collectively identify the best set of arms $a*$ corresponding to mean reward $\mu*$ given that they don't know the distribution or the means $\mu_a$. 
+For the players to pull the optimal arm, the high-level strategy is to collectively identify the best set of arms $a$ corresponding to mean reward $\mu*$ given that they don't know the distribution or the means $\mu_a$. 
 To do this, they must learn by *playing* and *exploring*. The learning efficiency can be represented as *expected regret*,
 
 $$\tag{1} R_t = \mathbb{E}\Bigl( T\mu* - \sum_{t=1}^T X_{a(t)}(t) \Bigr)$$
