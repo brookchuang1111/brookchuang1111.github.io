@@ -1,19 +1,19 @@
 ---
 layout: post
-title: " "
+title: "Multi-player Fun: Information Asymmetry and Noisy Rewards"
 tags: Bandits
 ---
-## 
+## Multi-player Fun: Information Asymmetry and Noisy Rewards
 
 Today we'll be looking at a specific problem that pertains to multi-player bandits. I'll be reviewing and summarizing a research paper that describes the mUCB-Interval algorithm. This algorithm exists in the field of reinforcement learning and implements exploration-exploitation tradeoffs under different parameters compared to the ETC algorithm.
 
-With two or more players, information asymmetry and ,in extension, reward asymmetry occurs. We'll be looking at how we tackle such imbalances and how we can still achieve *desired sets*. 
+With two or more players, information asymmetry and, by extension, reward asymmetry occurs. We'll be looking at how we tackle such imbalances and how we can still achieve *desired sets*. 
 
 Prerequisite Posts:
 * [Beware of Bandits!](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
 
 Source Material: 
-* [Optimal Cooperative Multiplayer Learning Bandits with Noist Rewards and No Communicaiton](https://arxiv.org/pdf/2311.06210)
+* [Optimal Cooperative Multiplayer Learning Bandits with Noisy Rewards and No Communication](https://arxiv.org/pdf/2311.06210)
 * [Bandit Algorithms](https://tor-lattimore.com/downloads/book/book.pdf)
   
 ---
