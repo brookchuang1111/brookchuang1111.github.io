@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Beware of Bandits!
+title: Beware of Bandits! Stochastic Bandits and Their Assumptions 
 tags: Bandits
 ---
-## Beware of Bandits!
-### Stochastic Bandits and Their Assumptions 
+## Beware of Bandits! Stochastic Bandits and Their Assumptions 
 
 Welcome to my first-ever blog post! The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
 In this post, I'll hash over bandits, their properties, and some important assumptions we'll decompose under. 
