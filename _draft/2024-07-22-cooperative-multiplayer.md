@@ -3,13 +3,16 @@ layout: post
 title: " "
 tags: Bandits
 ---
-## 
+## ""
+
 
 
 Prerequisite Posts:
 * []()
 Source Material: 
 * [Optimal Cooperative Multiplayer Learning Bandits with Noist Rewards and No Communicaiton](https://arxiv.org/pdf/2311.06210)
+
+---
 
 ## Review of Regret and Reward
 Although we looked at regret and rewards in *Beware of Bandits*, I'll reiterate some information that William has put in slightly different terminology compared to the *Bandits Bible*.  
@@ -45,9 +48,14 @@ $\eta_a$ is not indexed by the player $i$ becuase each player contributes to the
 While each player will likely have different rewards, the rewards are iid and the regret will therefore be the same across all players. 
 This paper uses the the suggested lower regret bound $O(logT)$ for the multi-player decentralized learning algorithm with the same regret order. 
 
+*INSERT ASYMMETRY*
+
+---
+
 ## Main Results
 
-To maximize the cumulative rewards we define the *UCB index, also known as the Upper COndifence Bound for each joint action. The player's objective is to pull the largest UCB index as often as possible. For each player $i$ we can deifne the UCB index as,
+### The UCB Index 
+To maximize the cumulative rewards we define the *UCB index, also known as the Upper COndifence Bound for each joint action. The player's objective is to pull the largest UCB index as often as possible. For each player $i$ we can define the UCB index as,
 
 $$\tag{2} \eta^i_a(t) = \begin{cases} 
       \infty & \text{if } \eta_a(t) = 0, \\
@@ -56,18 +64,71 @@ $$\tag{2} \eta^i_a(t) = \begin{cases}
 $$
 
 Let $\epsilon_a(\dots)$ be the constant added to the empirical mean for arm $a$ in calculating the UCB index. 
-This constant is the same for every player and therefore not indexed by $i$. Our algorithm introduced further in the post wil be of length $2\epsilon_a(\dots)$. 
+This constant is the same for every player and therefore not indexed by $i$. Our algorithm introduced further in the post will be of length $2\epsilon_a(\dots)$. 
 Because of this we add a tuning parameter $\gamma$ such that,
 
 $$\tag{3} \epsilon(\eta_a, \delta, \gamma) := \gamma\sqrt{\frac{log(1\delta}{\eta_a}}$$
 
-Using Hoeffding's bound for subgaussian variables, the true mean $\mu_a$ is within the interval
+Using Hoeffding's bound for subgaussian variables[^3], the true mean $\mu_a$ is within the interval
 
 $$\tag{4} I_a^i = (\hat{\mu_a^i} - \epsilon_a, \hat{\mu_a^i} + \epsilon_a)$$
 
-
 with high probability. We can use this confidence interval to create a set of arms that are likely to be optimal and to make this selection from this set. 
 While this interval is different for each player $i$ given some joint action $a$ due to the empirical means $\hat{\mu_a^i}$ being different, $\epsilon_a)$ is not indexed by $i$. 
+
+### Reward Asymmetry 
+To deal with information asymmetry, all players will maintain a desired set that contains the joint arms that are candidates for the optimal arm. Initially, $K^m$ joint actions are in this desired set; this desirability is predetermined by a arbitrary ordering. 
+
+A joint action is *considered* if it is the arm in the desired set that supposed to be pulled given the order that was agreed by all players. We denote this joint action in the desired action as $c$. If there is $l$ joint actions $c_1, \dots, c_l$ then the ordering of the desired set can be viewed by the following flow chart as, 
+
+*INSERT FLOW1*
+
+A joint arm is *eliminated* from the set if it does not fall within the UCB interval and is disjoint from another arm. Player $i$ effectively "communicates" this elimination to the other players by not pulling $c_t[i]$; the other players will also eliminate this arm from their desired set while maintaining order. *Pulling a joint arm is not considered the same as removing a considered arm from a set.*
+
+The net flow can be visualized as,
+
+*INSERT FLOW2* 
+
+### Run-through Example 
+
+Consider a two-player setting where each player has two arms. We will represent each joint as as a matrix where each cell is the UCB interval defined in equation $4$ (general visualization of the player environment can be seen in figure 1). 
+
+If the first and second row and column correspond to player 1 and player 2 respectively, 
+
+$$
+\begin{bmatrix}
+(-\infty, \infty) & (-\infty, \infty)\\
+(-\infty, \infty) & (-\infty, \infty)
+\end{bmatrix}_1, 
+\begin{bmatrix}
+(-\infty, \infty) & (-\infty, \infty)\\
+(-\infty, \infty) & (-\infty, \infty)
+\end{bmatrix}_2
+$$
+
+Suppose the order of the joint action is $(1, 1), (1, 2), (2, 1), (2,2)$. Initially, all UCB intervals are infinite as each arm gets pulled at least once. Then after the joint action flow where $t = 4$, the matrices become, 
+
+$$
+\begin{bmatrix}
+(.2, .5) & (.3, .6)\\
+(.55, .9) & (.65, .8)
+\end{bmatrix}_1, 
+\begin{bmatrix}
+(.5, .7) & (.4, .7)\\
+(.6, .9) & (.65, .8)
+\end{bmatrix}_2
+$$
+
+For round $t=5$, we consider $(1,1)$ again. But because the UCB interval is disjoint some arm, that being (2,1), player 1 knows with high probability that this arm is not optimal. To communicate this to player 2, player 1 will instead choose arm 2. Player 2 does not know player 1's actions during the round, so it still considers (1,1); player 2 will choose 1. The joint action of these two players will be $(2, 1)$. 
+
+After choosing these arms, player 2 sees that arm 1 is suboptimal and now understands $(1,1)$ should be eliminated. The flow of the desired set now becomes $(1, 2), (2, 1), (2,2)$. 
+
+For round $t=6$, the next considered arm is $(1, 2)$ and the process repeats until we are left with the most optimal arm with the highest probability. In this case, this is $(2, 2)$. 
+
+---
+
+## Regret Bound Analysis 
+
 
 
 [^1]: Where $a$ is a vector.
