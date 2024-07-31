@@ -29,7 +29,6 @@ plugins:
 
 titles_from_headings:
   strip_title: true
-  collections: true
 
 defaults:
   - scope:
@@ -37,7 +36,3 @@ defaults:
       type: post
     values:
       tags: 
-      - Bandits
-      - Statistics / ML
-      - Poker 
-      - Game Theory 
