@@ -5,11 +5,11 @@ tags: Bandits
 ---
 ## Beware of Bandits! Stochastic Bandits and Their Assumptions 
 
-Welcome to my first-ever blog post! The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
+The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
 In this post, I'll hash over bandits, their properties, and some important assumptions we'll decompose under. 
 
 Most of what I'm learning and the material I regurgitate comes from a holy grail book some affectionately coin as the [*Bandit Bible*](https://banditalgs.com). 
-Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything you need to know about bandit algorithms. However, as a cheeky plug, if you would like a shortened version with my annotations I reference when reviewing, keep on reading!
+Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything you need to know about bandit algorithms. 
 
 > *An old bandit adage: A bell is a cup until it is struck.*
 > 
@@ -22,7 +22,7 @@ Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
     <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/Bandit.jpg" style="width: 100%; height: 300px; object-fit: cover;">
-    <p>Bandit Heeler Being a Smooth Criminal</p>
+    <p>A different kind of "Bandit"</p>
   </div>
 </div>
 
@@ -118,8 +118,7 @@ R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}{[}T_a(n){]}$$
 This regret decomposition decomposes regret in terms of loss due to using each of the arms. This tells us that to keep the regret small the learned should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
 
 ---
-Yay! Now you know the bare bones of stochastic bandits, from how we formally define bandits to the introductions of decomposing regret. We can now delve into different algorithms and applications whcih I'll be writing soon! 
-
+Now you know the bare bones of stochastic bandits! From how we formally define bandits to the introduction of decomposing regret, we can now explore more complex and accurate algorithms and their bounds, as well as create new bounds with different environments and bandit parameters.
 
 [^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
 [^2]: The utility of a function is the outcome of our probability distribution (ie. our preference for one reward over the other).
