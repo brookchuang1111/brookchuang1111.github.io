@@ -178,9 +178,7 @@ The figure above shoes the expected regret of ETC when playing a Gaussian Bandit
 
 ---
 
-This is the simplest and what my PI calls the most "stupid" bandit algorithm. But it's still good to review for my own sake. In some ways, this parallels any betting game: when do we access the trade-off to commit to a strategy versus explore different strategies? What's our EV (or in this case our constructed bound) for finding the optimal reward and sticking to such reward? Interesting thoughts I might explore later. An example of a betting game can be seen in this [Jane Street Mock Interview](https://www.youtube.com/watch?v=NT_I1MjckaU)
-
-Enough babbling from me, see you all in the next post! 
+This is the simplest and what my PI calls the most "stupid" bandit algorithm but it's still good to review for my own sake. In some ways, this parallels any betting game: when do we access the trade-off to commit to a strategy versus explore different strategies? What's our EV (or in this case our constructed bound) for finding the optimal reward and sticking to such reward? Interesting thoughts I might explore later. An example of a betting game can be seen in this [Jane Street Mock Interview](https://www.youtube.com/watch?v=NT_I1MjckaU)
 
 [^1]: More about the variance proxy can be found [here](https://en.wikipedia.org/wiki/Sub-Gaussian_distribution)
 [^2]: Review these concepts [here](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
