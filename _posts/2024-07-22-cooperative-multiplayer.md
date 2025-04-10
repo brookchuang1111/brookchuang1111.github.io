@@ -5,7 +5,7 @@ tags: Bandits
 ---
 ## The More the Merrier: Multi-Player Bandit Information Asymmetry
 
-(Edit 4/1/25: This is an old post and honestly is pretty shit, but I'm attached so I can't archive it.)
+(Edit 4/10/25: This is an old post and honestly is pretty shit, but I'm attached so I can't archive it.)
 
 For the sake of my own understanding (and sanity) I'm going to be summarizing a research paper that describes the mUCB-Interval algorithm.
 

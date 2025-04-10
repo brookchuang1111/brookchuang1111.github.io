@@ -5,7 +5,7 @@ tags: Bandits
 ---
 ## Beware of Bandits! Stochastic Bandits and Their Assumptions 
 
-(Proceed with caution: This was my first post and honestly is pretty shit, but I'm attached so I can't archive it.)
+(Edit 4/10/25: This was my first post and honestly is pretty shit, but I'm attached so I can't archive it.)
 
 The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
 
