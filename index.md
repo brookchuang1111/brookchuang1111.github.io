@@ -27,7 +27,7 @@ Proceed with caution and thanks for visiting! <br />
   </div>
   <div style="text-align: center;">
     <img src="assets/index_images/carrots.jpg"   style="width: 100%; height: 250px; object-fit: cover;">
-    <p>Rotund carrots spotted at the Brentwood Farmers Market</p>
+    <p>Rotund carrots spotted at Brentwood Farmers Market</p>
   </div>
   <div style="text-align: center;">
     <img src="assets/index_images/oscars_whores.jpg" style="width: 100%; height: 250px; object-fit: cover;">
