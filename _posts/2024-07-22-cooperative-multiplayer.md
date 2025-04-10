@@ -58,7 +58,7 @@ This paper uses the the suggested lower regret bound $O(logT)$ for the multi-pla
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/asymmetry.png" style="width: 100%; height: 250px; object-fit: cover;">
+    <img src="assets\post_assets\asymmetry.png" style="width: 100%; height: 250px; object-fit: cover;">
     <p>The left matrix is the joint action space of player a and b with each cell corresponding to a subgaussian reward distribution for some mean. The table on the right lists different types of information asymmetry. In this post, we focus on Reward Asymmetry in grey.</p>
   </div>
 </div>
@@ -96,7 +96,7 @@ A joint action is *considered* if it is the arm in the desired set that supposed
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/flow1.png" style="width: 100%; height: 90px; object-fit: cover;">
+    <img src="assets\post_assets\flow1.png" style="width: 100%; height: 90px; object-fit: cover;">
     <p></p>
   </div>
 </div>
@@ -107,7 +107,7 @@ The net flow can be visualized as,
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/flow2.png" style="width: 100%; height: 90px; object-fit: cover;">
+    <img src="assets\post_assets\flow2.png" style="width: 100%; height: 90px; object-fit: cover;">
     <p></p>
   </div>
 </div>
@@ -116,7 +116,7 @@ The net flow can be visualized as,
 
 <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="https://raw.githubusercontent.com/brookchuang1111/brookchuang1111.github.io/main/post_assets/algo.png" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="assets\post_assets\algo.png" style="width: 100%; height: 300px; object-fit: cover;">
     <p>Figure 1: mUCB-Interval Algorithm</p>
   </div>
 </div>

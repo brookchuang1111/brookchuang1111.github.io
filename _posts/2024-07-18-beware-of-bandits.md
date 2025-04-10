@@ -64,7 +64,7 @@ But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/no_regrets.jpg" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="assets\post_assets\no_regrets.jpg" style="width: 100%; height: 300px; object-fit: cover;">
     <p>No Regrets!</p>
   </div>
 </div>
