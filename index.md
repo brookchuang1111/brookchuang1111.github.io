@@ -22,7 +22,7 @@ Proceed with caution and thanks for visiting! <br />
 <!-- First set of 3 images -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
-    <img src="assets/index_images/when_in_austin.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <img src="assets/index_images/when_in_austin.JPG" style="width: 100%; height: 250px; object-fit: cover;">
     <p>When in Austin (bad decisions are made)</p>
   </div>
   <div style="text-align: center;">
@@ -42,7 +42,7 @@ Proceed with caution and thanks for visiting! <br />
     <p>One very shiny trophy located in the Longhorn Athletics Hall </p>
   </div>
   <div style="text-align: center;">
-    <img src="assets/index_images/texas_bbq.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <img src="assets/index_images/texas_bbq.JPG" style="width: 100%; height: 250px; object-fit: cover;">
     <p>Terry Black's: It's sacrilege how good this was</p>
   </div>
   <div style="text-align: center;">
