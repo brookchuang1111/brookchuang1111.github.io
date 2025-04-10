@@ -39,7 +39,7 @@ Proceed with caution and thanks for visiting! <br />
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
     <img src="assets/index_images/trophy.jpg" style="width: 100%; height: 250px; object-fit: cover;">
-    <p>One very shiny trophy located in the Longhorn Athletics Hall </p>
+    <p>One very shiny trophy located in Longhorn Athletics Hall </p>
   </div>
   <div style="text-align: center;">
     <img src="assets/index_images/texas_bbq.JPG" style="width: 100%; height: 250px; object-fit: cover;">

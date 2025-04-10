@@ -3,6 +3,12 @@ hr {
   margin-bottom: 20px;
 }
 
+/* Override site header border color */
+.site-header {
+  border-top: 5px solid #f8f8f8; /* Replace with desired color */
+}
+
+
 /* Post navigation links */
 .post_navi {
   display: flex;
