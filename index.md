@@ -13,8 +13,8 @@
 
 Hello world! I'm Brook and per this blog name welcome to my inner ramblings. <br />
 <br />
-I write about what I've been learning in stats, math, trading, ect. <br />
-For fun check out my (soon to be written) poker and game theory notes. <br /><br />
+I write about anything I've been reading, learning in stats, math, trading, ect. <br />
+Warning: This blog serves as a personal notebook -- full of half-assed ideas, vibe code, and questionable logic. Proceed with caution. <br /><br />
 Thanks for visiting! <br />
 
 <br />
