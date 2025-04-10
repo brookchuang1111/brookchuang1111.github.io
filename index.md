@@ -11,7 +11,7 @@
 
 <br />
 
-Hello world! I'm Brook and per this blog name welcome to my inner ramblings. <br />
+Hello world! I'm Brook and per my blog's name welcome to my inner ramblings. <br />
 <br />
 I write about anything I've been reading, learning in stats, math, trading, ect. <br />
 Warning: This blog serves as a personal notebook -- full of half-assed ideas, vibe code, and questionable logic.  <br /><br />
