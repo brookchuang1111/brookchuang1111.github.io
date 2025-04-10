@@ -6,6 +6,8 @@ tags: Bandits
 ## Afraid of Commitment: Understanding the Explore-then-Commit Algorithm
 ### Understanding the Explore-then-Commit Algorithm
 
+(Edit 4/1/25: This is an old post and honestly is pretty shit, but I'm attached so I can't archive it.)
+
 Now that we understand the basics of bandits, we can start exploring some basic algorithms that utilize the idea of regret and reward! The algorithm we'll be exploring is called the Explore-then-Commit algorithm (ETC). ETC is split into two phases: exploring and committing by playing each arm a fixed number of times and committing to that arm for the rest of the rounds. 
 
 Note the prerequisite for this blog post:

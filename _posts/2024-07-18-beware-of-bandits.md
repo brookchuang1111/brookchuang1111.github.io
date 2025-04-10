@@ -5,11 +5,11 @@ tags: Bandits
 ---
 ## Beware of Bandits! Stochastic Bandits and Their Assumptions 
 
-The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
-In this post, I'll hash over bandits, their properties, and some important assumptions we'll decompose under. 
+(Proceed with caution: This was my first post and honestly is pretty shit, but I'm attached so I can't archive it.)
 
-Most of what I'm learning and the material I regurgitate comes from a holy grail book some affectionately coin as the [*Bandit Bible*](https://banditalgs.com). 
-Written by Tor Lattimore and Csaba Szepesvari, this book encompasses everything you need to know about bandit algorithms. 
+The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
+
+Much of what I synthesize comes from the holy grail text some affectionately coin as the [*Bandit Bible*](https://banditalgs.com). Written by Tor Lattimore and Csaba Szepesvari, this textbook is widely regarded as as a ground up manual and gateway into bandits research.  
 
 > *An old bandit adage: A bell is a cup until it is struck.*
 > 

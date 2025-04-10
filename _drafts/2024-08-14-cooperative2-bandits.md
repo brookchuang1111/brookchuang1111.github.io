@@ -5,7 +5,10 @@ tags: [Bandits]
 ---
 ## A Review of Cooperative Multiplayer Learning Bandits
 
-I think I already posted about multi-player bandits but I have to present this paper to my PI and I'm a little rusty - so a blog post should help me get through this meeting (fingers crossed). 
+(Edit 4/1/25: This is an old (unfinished) post and honestly is pretty shit, but I'm attached so I can't archive it.)
+
+I think I already posted a high-level overview of multi-player bandits but I have to present this paper to my PI and I'm a little rusty (and scared shitless)- so a blog post should help me get through this meeting (fingers crossed). 
+
 Source Material
 * [Optimal Cooperative Multiplayer Learning Bandits with Noisy Rewards and No Communication](https://arxiv.org/abs/2311.06210)
 ---
@@ -52,7 +55,7 @@ The empirical mean $\hat{\mu_a^i}\eta_a(t)$ is indexed by player because since e
 Because the reward of each joint arm has the same mean among all players, the $R_t$ is the same for each player. 
 The number of times joint arm $a$ is pulled, though, denoted $\eta_a(t)$ is not indexed by player since each player is contributing to the same joint action $a$ at every round. 
 
-### Main Results 
+### Main Results
 To maximize the cumulative rewards, the players define the UCB index for each joint action (not just their own action) and try to pull arms with the highest UCB indices. 
 This index is given by (2) and is indexed by player given the fact each player observes a different empirical reward mean. 
 Using Hoeffding's bound, the true mean lies within the interval of (4). 
@@ -67,9 +70,6 @@ Now proposing mUCB-Intervals:
 If there are $l$ joint actions, $c_1, \dots, c_l$ then the ordering of the desired set can be seen in flow chart (5). 
 A joint arm is eliminated from this desired set if at some round $t$ a player $i$ observes the considered joint arm has a UCB internal that is below and disjoint from another arm. 
 Player $i$ will "communicate" this elimination by not pulling the considered arm and eliminating it from its desired set. 
-
-### Example 
-
 
 
 

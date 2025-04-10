@@ -1,4 +1,4 @@
-> ### babbling
+ ### babbling
 > */bab(ə)liNG/*
 >
 > *adjective*
@@ -14,22 +14,41 @@
 Hello world! I'm Brook and per this blog name welcome to my inner ramblings. <br />
 <br />
 I write about anything I've been reading, learning in stats, math, trading, ect. <br />
-Warning: This blog serves as a personal notebook -- full of half-assed ideas, vibe code, and questionable logic. Proceed with caution. <br /><br />
-Thanks for visiting! <br />
+Warning: This blog serves as a personal notebook -- full of half-assed ideas, vibe code, and questionable logic.  <br /><br />
+Proceed with caution and thanks for visiting! <br />
 
 <br />
 
-<div style="display: flex; justify-content: space-between;">
+<!-- First set of 3 images -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/tinned_fish11.jpg" style="width: 100%; height: 300px; object-fit: cover; object-position: top;">
-    <p>Discovering Santa Barbara's tinned fish selection</p>
+    <img src="assets/index_images/when_in_austin.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <p>When in Austin (bad decisions are made)</p>
   </div>
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/weird_horse.jpg" style="width: 100%; height: 300px; object-fit: cover;">
-    <p>A funny looking horse</p>
+    <img src="assets/index_images/carrots.jpg"   style="width: 100%; height: 250px; object-fit: cover;">
+    <p>Rotund carrots spotted at the Brentwood Farmers Market</p>
   </div>
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/images/charliexcx_nerd.jpg" style="width: 100%; height: 300px; object-fit: cover;">
-    <p>Brat (or nerd?) summer!</p>
+    <img src="assets/index_images/oscars_whores.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <p>When spring break plans make it out of the group chat </p>
   </div>
 </div>
+
+<!-- Second set of 3 images (page break) -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+  <div style="text-align: center;">
+    <img src="assets/index_images/trophy.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <p>One very shiny trophy located in the Longhorn Athletics Hall </p>
+  </div>
+  <div style="text-align: center;">
+    <img src="assets/index_images/texas_bbq.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <p>Terry Black's: It's sacrilege how good this was</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="assets/index_images/indian_food.jpg"  style="width: 100%; height: 250px; object-fit: cover;">
+    <p>The spread with (not pictured) Linnea at UlavacharU Tiffins</p>
+  </div>
+</div>
+<br />
+

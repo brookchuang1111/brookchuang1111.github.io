@@ -5,11 +5,15 @@ tags: Bandits
 ---
 ## The More the Merrier: Multi-Player Bandit Information Asymmetry
 
-Today we'll be looking at a specific problem that pertains to multi-player bandits. I'll be reviewing and summarizing a research paper that describes the mUCB-Interval algorithm. This algorithm exists in the field of reinforcement learning and implements exploration-exploitation tradeoffs under different parameters compared to the ETC algorithm.
+(Edit 4/1/25: This is an old post and honestly is pretty shit, but I'm attached so I can't archive it.)
+
+For the sake of my own understanding (and sanity) I'm going to be summarizing a research paper that describes the mUCB-Interval algorithm.
+
+This algorithm exists in the field of reinforcement learning and implements exploration-exploitation tradeoffs under different parameters compared to the ETC algorithm.
 
 With two or more players, information asymmetry and, by extension, reward asymmetry occurs. We'll be looking at how we tackle such imbalances and how we can still achieve *desired sets*. 
 
-Prerequisite Posts:
+Prerequisite Posts (if you care to follow along):
 * [Beware of Bandits!](https://brookchuang1111.github.io/2024/07/18/beware-of-bandits.html)
 
 Source Material: 
