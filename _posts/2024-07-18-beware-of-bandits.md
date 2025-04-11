@@ -5,7 +5,7 @@ tags: Bandits
 ---
 ## Beware of Bandits! Stochastic Bandits and Their Assumptions 
 
-(Edit 4/10/25: This was my first post and honestly is pretty shit, but I'm attached so I can't archive it.)
+(Edit 4/10/25: This is an old post and honestly is pretty shit, but I'm attached so I can't archive it.)
 
 The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
 
@@ -21,10 +21,11 @@ Much of what I synthesize comes from the holy grail text some affectionately coi
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="https://github.com/brookchuang1111/brookchuang1111.github.io/raw/main/post_assets/Bandit.jpg" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="{{ '/assets/post_assets/bandit.JPG' | relative_url }}" style="width: 100%; height: 300px; object-fit: cover;">
     <p>A different kind of "Bandit"</p>
   </div>
 </div>
+
 
 
 #### Definition: Stochastic Bandits 
@@ -62,9 +63,9 @@ But to assign utility[^2] to our distirbutions of $S_n = \sum _{t=1}^{n} X_t$ is
 
 ### The Regret
 
-  <div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="assets\post_assets\no_regrets.jpg" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="{{ '/assets/post_assets/no_regrets.jpg' | relative_url }}" style="width: 100%; height: 300px; object-fit: cover;">
     <p>No Regrets!</p>
   </div>
 </div>

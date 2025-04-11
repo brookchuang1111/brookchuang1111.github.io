@@ -56,9 +56,9 @@ $\eta_a$ is not indexed by the player $i$ becuase each player contributes to the
 While each player will likely have different rewards, the rewards are iid and the regret will therefore be the same across all players. 
 This paper uses the the suggested lower regret bound $O(logT)$ for the multi-player decentralized learning algorithm with the same regret order. 
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\asymmetry.png" style="width: 100%; height: 250px; object-fit: cover;">
+<div style="display: flex; justify-content: space-between; padding: 30px">
+  <div style="text-align: center;">
+    <img src="{{'/assets/post_assets/asymmetry.png' | relative_url }}" style="width: 100%; height: 250px; object-fit: cover;">
     <p>The left matrix is the joint action space of player a and b with each cell corresponding to a subgaussian reward distribution for some mean. The table on the right lists different types of information asymmetry. In this post, we focus on Reward Asymmetry in grey.</p>
   </div>
 </div>
@@ -94,9 +94,9 @@ To deal with information asymmetry, all players will maintain a desired set that
 
 A joint action is *considered* if it is the arm in the desired set that supposed to be pulled given the order that was agreed by all players. We denote this joint action in the desired action as $c$. If there is $l$ joint actions $c_1, \dots, c_l$ then the ordering of the desired set can be viewed by the following flow chart as, 
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\flow1.png" style="width: 100%; height: 90px; object-fit: cover;">
+<div style="display: flex; justify-content: space-between; padding: 30px">
+  <div style="text-align: center;">
+    <img src="{{'/assets/post_assets/flow1.png' | relative_url }}" style="width: 100%; height: 90px; object-fit: cover;">
     <p></p>
   </div>
 </div>
@@ -105,19 +105,19 @@ A joint arm is *eliminated* from the set if it does not fall within the UCB inte
 
 The net flow can be visualized as,
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\flow2.png" style="width: 100%; height: 90px; object-fit: cover;">
+<div style="display: flex; justify-content: space-between; padding: 30px">
+  <div style="text-align: center;">
+    <img src=  "{{'/assets/post_assets/flow2.png' | relative_url }}" style="width: 100%; height: 90px; object-fit: cover;">
     <p></p>
   </div>
 </div>
 
 ### Run-through Example 
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\algo.png" style="width: 100%; height: 300px; object-fit: cover;">
-    <p>Figure 1: mUCB-Interval Algorithm</p>
+<div style="display: flex; justify-content: space-between; padding: 30px">
+  <div style="text-align: center;">
+    <img src=  "{{'/assets/post_assets/algo.png' | relative_url }}" style="width: 100%; height: 300px; object-fit: cover;">
+    <p></p>
   </div>
 </div>
 

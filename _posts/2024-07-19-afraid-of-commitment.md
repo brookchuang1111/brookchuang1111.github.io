@@ -19,13 +19,11 @@ Source material:
 ---
 
 ## The Algorithm 
-  <div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\commitment.png" style="width: 100%; height: 80px; object-fit: cover;">
-    <p></p>
+<div style="display: flex; justify-content: space-between; padding: 30px 0;">
+  <div style="text-align: center;">
+    <img src="{{'/assets/post_assets/commitment.png' | relative_url }}" style="width: 100%; height: 80px; object-fit: cover;">
   </div>
 </div>
-
 
 ### The Cramer-Chernoff Method and Subgaussian Random Variables
 Before we can jump into the algorithm, we need to brush up on some assumptions and distributions. For the rest of this post, we assume that all bandit instances are $\xi_{SG}^k(1)$ where the reward distribution for all arms is 1-subgaussian.
@@ -77,14 +75,11 @@ where $\hat{\mu} = \frac{1}{n}\sum_{t=1}^{n}X_t$.
 ---
 
 ## The ETC Policy
-
-  <div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\explore.png" style="width: 100%; height: 80px; object-fit: cover;">
-    <p></p>
+<div style="display: flex; justify-content: space-between; padding: 30px 0;">
+  <div style="text-align: center;">
+    <img src="{{'/assets/post_assets/explore.png' | relative_url }}" style="width: 100%; height: 80px; object-fit: cover;">
   </div>
 </div>
-
 
 Ok sorry, let's get back to the algorithm. ETC is characterized by the number of times it explores each arm, denoted $m$. Because there are $k$ actions, the total number of times ETC explores is $mk$ rounds until committing. The *average reward* is denoted as $\hat{\mu}_i(t)$ such that, 
 
@@ -167,11 +162,10 @@ This bound is called the *worst-case, problem-free, or problem-independent* boun
 ---
 
 ### The Bound in Action
-
-  <div style="display: flex; justify-content: space-between;">
-  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
-    <img src="assets\post_assets\etc_bound.png" style="width: 100%; height: 320px; object-fit: cover;">
-    <p>The theoretical upper bound surprisingly close to the actual performance</p>
+<div style="display: flex; justify-content: space-between; padding: 30px 0;">
+  <div style="text-align: center; width: 100%;">
+    <img src="{{ '/assets/post_assets/etc_bound.png' | relative_url }}" 
+         style="width: 100%; height: 400px; object-fit: cover;">
   </div>
 </div>
 
