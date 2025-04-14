@@ -37,7 +37,7 @@ Proceed with caution and thanks for visiting! <br />
 <!-- Second set of 3 images (page break) -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
-    <img src="assets/index_images/red_light.JPG" style="width: 100%; height: 250px; object-fit: cover;">
+    <img src="assets/index_images/red_light.jpg" style="width: 100%; height: 250px; object-fit: cover;">
     <p>Linnea and her lizard shed (red light therapy)</p>
   </div>
   <div style="text-align: center;">
