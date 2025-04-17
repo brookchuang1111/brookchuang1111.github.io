@@ -57,16 +57,26 @@ Intuitively we know we have drank symmetrically if we reach $(5,5)$ of our latti
 ## An Introduction to Catalan Numbers 
 Lattice paths allow us to enter a peculiar world. Visualizations of sequences into paths start as a generalized lattice but can morph into complex and elegant representations of different path dynamics under $y=x$. These paths, which will help us efficiently count our LaCroix problem, are built upon Catalan numbers[^1]. But first, let me introduce you to Dyck paths and an arsenal of propositions that will help us build intuition. 
 
-**Dyck Paths**
+**Dyck Paths** <br />
 A Dyck path is a lattice path that doesn't cross the lime of $y = x$ from below. A visual representation can be seen in our drink path in figure 1. 
 
 In addition to Dyck paths I'll introduce some propositions that you'll convince yourself are factual; you can take my word for it or look at this heinous 113 long slide deck [^2]. 
 
-**Lemma 1.** For any $m$ and $n$ there are $\binom{m+n}{m}$ lattice paths from $(0,0)$ to $(m, n)$ in the mxn grid.
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Lemma 1.</strong>
+  <p>
+    For any $m$ and $n$ there are $\binom{m+n}{m}$ lattice paths from $(0,0)$ to $(m, n)$ in the mxn grid.
+  </p>
+</div>
 
 *Proof.* We can easily see this by flattening the dimensionality of the problem. Imagine the sum $m+n$ as a row of slots. In each slot we have six green and six pink chips to enter in any particular order. Hence for any six green chips the complement of the other six pink chips in inevitable. Hence 12 choose 6. 
 
-**Proposition 1** The lattice paths in a nxn grid that cross the line $y=x$ are in bijection with the lattice paths in the $(n-1)$x$(n+1)$ grid. 
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Proposition 1.</strong>
+  <p>
+    The lattice paths in a nxn grid that cross the line $y=x$ are in bijection with the lattice paths in the $(n-1)$x$(n+1)$ grid. 
+  </p>
+</div>
 
 *Proof.* Let $Q$ be the lattice path in the $(n-1)$ x $(n+1)$ grid and $P$ of the nxn grid. We can construct $Q$ as the same as $P$ up to a certain point $p$. After $p$ let us denote this path $Q_p$ and swap path $P$ directions for every step for $Q_p$'s path. We can see that $Q$ has $n-1$ east steps and $n+1$ north steps. For $P$ there must be n east and n north steps, hence, there must be exactly one more east step than north steps after $p$. This intuition is classically called the Andre Reflection Method[^3]. More on this later.  
 
@@ -87,12 +97,16 @@ This proposition allows us to reduce the complexity of counting 'bad' paths that
 
 Now we're ready to dive into Catalan numbers. 
 
-**Definition 1. Catalan numbers.** 
-Catalan numbers are given by the formula,   
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Definition 1. Catalan numbers</strong>
+  <p>
+    Catalan numbers are given by the formula,   
 
-$$\begin{align}
-C_n = \binom{2n}{n} - \binom{2n}{n+1}
-\end{align}$$
+    $$\begin{align}
+    C_n = \binom{2n}{n} - \binom{2n}{n+1}
+    \end{align}$$
+  </p>
+</div>
 
 Other forms include:
 
@@ -106,7 +120,7 @@ C_n = \frac{1}{n+1}\binom{2n}{n} \\\text{ }
 
 Hence $C_n =$ {number of total paths} - {number of bad paths}, reaching our decomposition of $C_n$. In summary we combined the principles of counting symmetry and the skewed grid bijection to decompose Catalan numbers as the subtraction of the total number paths with the total number of 'bad' paths. 
 
-**Combining It All Together**
+**Combining It All Together** <br />
 In many ways a Dyck sequence is a geometrical representation of balance, like a surface of a pond. A fish, water bug, or duck that does not disrupt the well-formed waterline is a representation of our one-to-one correspondence, called a *bijection*, to each other. Their path is the same, but its meaning changes depending on the lens you use. A fish's underwater trail can parallel a string of kelp's sway to the current, but they serve as mathematical refractions caused by the watery environment they live in, their form as Dyck paths casting long shadows onto the pond floor. 
 
 Catalan numbers are the representation of the pond depths. They count of all valid paths our pond inhabitants and the refractions of these paths, tallying each specular reflection to hold a single balanced truth on top of its surface. 
@@ -119,26 +133,40 @@ Catalan numbers are the representation of the pond depths. They count of all val
 ## Objects Counted by Catalan Numbers 
 With this obscure and seemingly tepid equation we can do some real magic. Catalan numbers can count many objects, from chords to arcs to binary trees[^1],  but we'll shift our focus onto two that are seemingly divergent in their relation but provide us with a way to bring this back full circle. To do this  I'll need to introduce some more propositions and definitions.
 
-Firstly, we'll look at a ballot sequence. 
+Firstly, we'll look at a Ballot sequence. 
 
-**Definition 2. Ballot sequences.**
-A ballot sequence of $2n$ is a sequence with n negative and n positive 1's such that every partial sum is nonnegative. Obviously this means we have more 1's that -1's. Interestingly enough a ballot sequence can be counted by Catalan numbers through a bijection of Dyck Paths. 
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Definition 2. Ballot Sequences</strong>
+  <p>
+    A Ballot sequence of $2n$ is a sequence with n negative and n positive 1's such that every partial sum is nonnegative. Obviously this means we have more 1's that -1's. Interestingly enough a Ballot sequence can be counted by Catalan numbers through a bijection of Dyck Paths. 
+  </p>
+</div>
 
-**Proposition 2.** There are $C_n$ ballot sequences of length 2n.
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Proposition 2.</strong>
+  <p>
+    There are $C_n$ Ballot sequences of length 2n.
+  </p>
+</div>
 
-*Proof.* First we convert the ballot sequence to a lattice path where 1's are green and -1's are pink. Given that we have a nonnegative sequence, this means we have more or equal to the number of horizontal moves that vertical in an given path subset. Hence we never cross $y=x$, essentially mapping the ballot sequence to a Dyck path. 
+*Proof.* First we convert the Ballot sequence to a lattice path where 1's are green and -1's are pink. Given that we have a nonnegative sequence, this means we have more or equal to the number of horizontal moves that vertical in an given path subset. Hence we never cross $y=x$, essentially mapping the Ballot sequence to a Dyck path. 
 
 To chain it together:
-A.  Dyck paths are paths that do not cross $y=x$
-B.  Catalan paths are composed of up of Dyck paths 
-C.  Ballot sequences are sequences where 1 is never behind (in count) of -1
+*  Dyck paths are paths that do not cross $y=x$
+*  Catalan paths are composed of up of Dyck paths 
+*  Ballot sequences are sequences where 1 is never behind (in count) of -1
   
-We can show that A = B by bijection, and B = C by bijection,  then A = C. Hence we can show ballot sequences are counted by Catalan numbers. 
+We can show that A = B by bijection, and B = C by bijection,  then A = C. Hence we can show Ballot sequences are counted by Catalan numbers. 
 
-## Parenthesization
+**Parenthesization** <br />
 Now we can introduce parenthesization, a way for us to model hierarchies and nested structures to help us count more efficiently that are also counted by Catalan numbers [^4]. 
 
-**Definition 3.** A parenthesization is an insertion of $n-1$ open parentheses and $n-1$ close parentheses such that the resulting expression involves products of two adjacent things at a time. 
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Definition 3. Parenthesization</strong>
+  <p>
+    A parenthesization is an insertion of $n-1$ open parentheses and $n-1$ close parentheses such that the resulting expression involves products of two adjacent things at a time.
+  </p>
+</div>
 
 An example of this can be seen with the term 'abcd'. With $n=4$ we have 3 sets of parentheses that allow us to subset the statement like,
 
@@ -147,7 +175,7 @@ $$\begin{align}
 ((ab)(cd)) \\
 (a(bc))(d) \\
 ((ab)c)(d) \\
-(a(b(cd))).
+(a(b(cd)))
 \end{align}$$
 
 It all connects back I promise! Because these parentheses are - as you probably guessed - Dyck paths where each right and left parentheses corresponds to a horizontal movement and a letter a vertical one. A example can be seen in the statement 'abcdef' mapped onto a 6x6 grid with the parenthesization of $(a((bc)d))(ef)$, 
@@ -160,12 +188,12 @@ A invalid parenthesization corresponds to a Dyck path that crosses $y=x$ by havi
 </figure>
 
 ## The Ballot Theorem
-We're almost at the home stretch! Our LaCroix problem, if you even remember, is a variation of the ballot problem which combines lattice walks, Catalan numbers, and skewed grid bijections for a magus opus of combinatorics and logic. The diversity and depth of proofs for this theorem are really quite beautiful [^3][^5], but for our instances we'll focus on the Andre-Reflection Method. 
+We're almost at the home stretch! Our LaCroix problem, if you even remember, is a variation of the Ballot problem which combines lattice walks, Catalan numbers, and skewed grid bijections for a magus opus of combinatorics and logic. The diversity and depth of proofs for this theorem are really quite beautiful[^3],[^5], but for our instances we'll focus on the Andre-Reflection Method. 
 
-**The Problem Statement:**
-In 1887 Joseph Bertrand introduced a ballot problem where candidates $(\mathcal{A})$ and $(\mathcal{B})$ are in election. $(\mathcal{A})$ receives $a$ total votes and $(\mathcal{B})$ receives $b$ total votes with the caveat $\mathcal{A} > \mathcal{B}$ at all times. How many ballot permutations could be made? 
+**The Ballot Problem** <br />
+In 1887 Joseph Bertrand introduced the Ballot problem where candidates $(\mathcal{A})$ and $(\mathcal{B})$ are in election. $(\mathcal{A})$ receives $a$ total votes and $(\mathcal{B})$ receives $b$ total votes with the caveat $\mathcal{A} > \mathcal{B}$ at all times. How many ballot permutations could be made? 
 
-Desire Andre produced a combinatorics proof for $k=1$ downturns (under the generalized ballot theorem problem) by counting the number of bad ballot permutations and subtracting that from the total amount of ballot permutations (not unlike of composition of Catalan numbers)[^6]. Andre understood that unfavorable permutations could be stratified into permutations starting with the starting vote as either $(\mathcal{B})$ or $(\mathcal{A})$, and for permutations starting with $(\mathcal{B})$, a bijection existed with all permutations of $b-1$ ballots $(\mathcal{B})$ and $a$ ballots of $(\mathcal{A})$. The same was understood for permutations starting with $(\mathcal{A})$.
+Desire Andre produced a combinatorics proof for $k=1$ downturns (under the generalized Ballot theorem problem) by counting the number of bad ballot permutations and subtracting that from the total amount of ballot permutations (not unlike of composition of Catalan numbers)[^6]. Andre understood that unfavorable permutations could be stratified into permutations starting with the starting vote as either $(\mathcal{B})$ or $(\mathcal{A})$, and for permutations starting with $(\mathcal{B})$, a bijection existed with all permutations of $b-1$ ballots $(\mathcal{B})$ and $a$ ballots of $(\mathcal{A})$. The same was understood for permutations starting with $(\mathcal{A})$.
 
 While Andre's proof has no geometric reasoning, we'll use a combination of both Andre's symmetry logic to sketch out the Andre-Reflection Method. 
 
@@ -186,31 +214,37 @@ Think back to Proposition 1. where we state that the lattice paths in a nxn grid
   </figcaption>
 </figure>
 
-By reflecting the bad ballot sequence at point $p$ where it crosses $b=a$, we rebalance upturns and downturns to make the path valid again. We can bijectively map the path to another with $a-1$ x $b+1$ grid for a total of $a+b$ steps. Using this reflection method we don't count the paths directly - instead we allow ourselves to take advantage of this peculiar correspondence to count paths in the skewed grid. For bad permutations that start with $(\mathcal{A})$ we must subtract one from $a$ such given this step is not reflected. For all bad paths this gives us:
-- Starting with A: $(a-1) + b = a + b - 1$
-- Starting with B: $a + (b-1) = a + b - 1$
+By reflecting the bad Ballot sequence at point $p$ where it crosses $b=a$, we rebalance upturns and downturns to make the path valid again. We can bijectively map the path to another with $a-1$ x $b+1$ grid for a total of $a+b$ steps. Using this reflection method we don't count the paths directly - instead we allow ourselves to take advantage of this peculiar correspondence to count paths in the skewed grid. For bad permutations that start with $(\mathcal{A})$ we must subtract one from $a$ such given this step is not reflected. For all bad paths this gives us:
+- Starting with $\mathcal{A}$: $(a-1) + b = a + b - 1$
+- Starting with $\mathcal{B}$: $a + (b-1) = a + b - 1$
 
-Hence the bad paths with different starts are symmetric; starting with either candidate essentially leads to the same problem given symmetry, so by subtracting the bad paths with a multiplier of 2 (for $(\mathcal{A})$ and $(\mathcal{B})$ starts) we achieve the solution to the ballot problem.
+Hence the bad paths with different starts are symmetric; starting with either candidate essentially leads to the same problem given symmetry, so by subtracting the bad paths with a multiplier of 2 (for $\mathcal{A}$ and $\mathcal{B}$ starts) we achieve the solution to the Ballot problem.
 
-**Solution. The Ballot Theorem**
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Solution. The Ballot Theorem</strong>
+  <p>
+    $$
+    \begin{align}
+    \binom{a+b}{a} - 2\binom{a + b -1}{a} = \frac{a-b}{a+b}\binom{a+b}{a}.
+    \end{align}
+    $$
+  </p>
+</div>
 
-$$\begin{align}
-\binom{a+b}{a} - 2\binom{a + b -1}{a} = \frac{a-b}{a+b}\binom{a+b}{a}.
-\end{align}$$ 
 
 ## Back to the LaCroix Problem
 Finally! Let's answer our problem statement and variants. 
 
-**The problem statement**
+**The Problem Statement** 
 - How many valid permutations of drawing a equal number of pink (guava) or green (key lime) cans will result in the last two cans being unique flavors given we always have more pink cans $\mathcal{P} > \mathcal{G}$?
 
-Our original problem statement hinges on the condition of always having two unique drink flavors left from the original six. Given $\mathcal{P} > \mathcal{G}$, we can directly apply the generalized ballot theorem where the number permutations is, assuming I only drink one at a given instance,
+Our original problem statement hinges on the condition of always having two unique drink flavors left from the original six. Given $\mathcal{P} > \mathcal{G}$, we can directly apply the generalized Ballot theorem where the number permutations is, assuming I only drink one at a given instance,
 
 $$\begin{align}
 \frac{p-g}{p+g}\binom{p+g}{p} = \frac{0}{12}\binom{12}{6} = 0.
 \end{align}$$ 
 
-**Catalan Numbers**
+**Catalan Numbers** <br />
 Weird, but this actually makes a lot of sense. If we want two unique flavors for the last two cans we need the previous draw to balance the count ie. reach $(5, 5)$ on our grid. This isn't possible with our inequality constraint of $\mathcal{P} > \mathcal{G}$, hence we have 0 valid permutations. 
 
 If we had a mismatched number of cans, lets say six pink and 5 green, then the number of drink permutations is given as, 
@@ -220,7 +254,7 @@ $$\begin{align}
 \end{align}$$
 
 ## Variation 1.
-1. What if I loosened the inequality to $\mathcal{P} \geq \mathcal{G}$? 
+- What if I loosened the inequality to $\mathcal{P} \geq \mathcal{G}$? 
 
 Assuming we have the *same number of cans for each flavor*, let's say six, then the loosened inequality lets us touch but not cross the line $\mathcal{G} = \mathcal{P}$ from under. Therefore counting valid paths is just a process of counting all Dyck paths on the grid. Hence we can use a Catalan number and our number of drinking permutations is, 
 
@@ -228,12 +262,18 @@ $$\begin{align}
 C_6 = \binom{12}{6} - \binom{12}{7} = 132.
 \end{align}$$
 
-**The Weak Ballot Theorem** 
-If we had *different numbers of cans* per flavor our approach is different such that we use the weak ballot theorem. Any ballot permutation where $a$ maintains at least $b$ can be converted to the traditional ballot theorem where $\mathcal{A} > \mathcal{B}$ by simply appending a vote for $\mathcal{A}$ at the beginning of the permutation[^5]. Therefore the weak ballot theorem is the same as the "strict" version when $\mathcal{A}$ receives $a+1$ votes and $\mathcal{B}$ receives $b$ votes, 
+**The Weak Ballot Theorem** <br />
+If we had *different numbers of cans* per flavor our approach is different such that we use the Weak Ballot theorem. Any ballot permutation where $a$ maintains at least $b$ can be converted to the traditional Ballot Theorem where $\mathcal{A} > \mathcal{B}$ by simply appending a vote for $\mathcal{A}$ at the beginning of the permutation[^5]. Therefore the weak Ballot theorem is the same as the "strict" version when $\mathcal{A}$ receives $a+1$ votes and $\mathcal{B}$ receives $b$ votes.  
 
-$$\begin{align}
-\frac{a-b + 1}{a+b + 1}\binom{a+b + 1}{a + 1} = \frac{a-b + 1}{a+1}\binom{a+b}{a}
-\end{align}$$ 
+
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Solution. The Weak Ballot Theorem</strong>
+  <p>
+    $$\begin{align}
+    \frac{a-b + 1}{a+b + 1}\binom{a+b + 1}{a + 1} = \frac{a-b + 1}{a+1}\binom{a+b}{a}
+    \end{align}$$
+  </p>
+</div>
 
 If we have six pink cans and five green cans given $\mathcal{P} \geq \mathcal{G}$, our number of valid permutations becomes, 
 
@@ -241,8 +281,8 @@ $$\begin{align}
 \frac{6-5 + 1}{6+1}\binom{6+5}{6} = 132.
 \end{align}$$ 
 
-**A Map from Strong to Weak**
-This sorcery would surely resurrect another witch burning! But just as it seems, the reason why the ballot theorem has such a nice closed form solution is because of its inherent bijection with constrained lattice paths.
+**A Map from Strong to Weak** <br />
+This sorcery would surely resurrect another witch burning! But just as it seems, the reason why the Ballot theorem has such a nice closed form solution is because of its inherent bijection with constrained lattice paths.
 
 By adding the additional $\mathcal{A}$ vote we added a buffer such that:
 - Every strict path from $(0,0) \rightarrow (a+1, b)$ with $\mathcal{A} > \mathcal{B}$ starts with A being ahead 
@@ -264,22 +304,22 @@ In other words each unique valid weak path is mapped to a unique strong path by 
   </figcaption>
 </figure>
 
-**Catalan Numbers Revisited** 
-Why does our number of drink permutations for unequal counts among flavors match the instance when we have the same number of drinks for each flavor counted by $C_6$? It's a coincidence in value, but not in structure. If we let $a=b=n$ for $\mathcal{A} \geq \mathcal{B}$ we also find that our weak ballot theorem is generalized by a Catalan number, 
+**Catalan Numbers Revisited** <br />
+Why does our number of drink permutations for unequal counts among flavors match the instance when we have the same number of drinks for each flavor counted by $C_6$? It's a coincidence in value, but not in structure. If we let $a=b=n$ for $\mathcal{A} \geq \mathcal{B}$ we also find that our Weak Ballot theorem is generalized by a Catalan number, 
 
 $$\begin{align}
 \frac{a-b + 1}{a+1}\binom{a+b}{a} = \frac{1}{n+1}\binom{2n}{n} = C_n. 
 \end{align}$$ 
 
-While this observation seems redundant, this gives us an algebraic understanding of the weak ballot theorem and further strengthens our intuition of Dyck paths and Catalan numbers. 
+While this observation seems redundant, this gives us an algebraic understanding of the Weak Ballot theorem and further strengthens our intuition of Dyck paths and Catalan numbers. 
 
 ## Variation 2. 
-2. What if I drank multiple green cans per visit to the fridge?  
+- What if I drank multiple green cans per visit to the fridge?  
 
-**Generalized Ballot Theorem**
-With our initial condition of $\mathcal{P} > \mathcal{G}$, multiple green drinks taken out of the fridge for each visit is a downturn step that has a greater magnitude that an upturn. Hence, we can reformulate our ballot theorem for some relative size $k$ such that $\mathcal{A} > k\mathcal{B}$. This is called the generalized ballot theorem[^5]and introduces new caveats with lead margins and rotated lattice walks. 
+**Generalized Ballot Theorem** <br />
+With our initial condition of $\mathcal{P} > \mathcal{G}$, multiple green drinks taken out of the fridge for each visit is a downturn step that has a greater magnitude that an upturn. Hence, we can reformulate our Ballot theorem for some relative size $k$ such that $\mathcal{A} > k\mathcal{B}$. This is called the generalized Ballot theorem[^5]and introduces new caveats with lead margins and rotated lattice walks. 
 
-For this theorem we hinge our linear line of $B=A$ on the grid such that our x-axis is our edict for a good or bad path. For example if a path dips below the x-axis then it is considered bad, while a path that stays above the x-axis is good. A downstep that starts above the x-axis and ends below it (negative slope) is a bad step. 
+For this theorem we hinge our linear line of $B=A$ on the grid such that our x-axis is our edict for a good or bad path. For example if a path dips below the x-axis then it is considered bad, while a path that stays above the x-axis is good. A downturn that starts above the x-axis and ends below it (negative slope) is a bad step. 
 
 Hence for each candidate step we have, 
 - $\mathcal{A}$ upturn: $(1, 1)$ 
@@ -318,9 +358,14 @@ $$\begin{align}
 
 Subtracting good paths from bad paths we finally achieve 
 
-$$\begin{align}
-\binom{a+b}{a} - (k+1)\binom{a+b-1}{a} = \frac{a-kb}{a+b}\binom{a+b}{a}. 
-\end{align}$$
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; margin: 20px 0; background-color: #f9f9f9;">
+  <strong>Solution. The Generalized Ballot Theorem</strong>
+  <p>
+    $$\begin{align}
+    \binom{a+b}{a} - (k+1)\binom{a+b-1}{a} = \frac{a-kb}{a+b}\binom{a+b}{a}. 
+    \end{align}$$
+  </p>
+</div>
 
 Applied to our problem statement let us assume we take two green cans ($k=2$) at a given time given 12 pink and five green cans. Our total number of drinking permutations such that $\mathcal{P} > k\mathcal{G}$ is,
 
@@ -328,7 +373,7 @@ $$\begin{align}
 \frac{a-kb}{a+b}\binom{a+b}{a} = \frac{12-(2)5}{12+5}\binom{12+5}{12} = 728. 
 \end{align}$$
 
-**Uniform Partitioning** 
+**Uniform Partitioning** <br />
 It can be shown that 
 
 $$\begin{align}
@@ -337,22 +382,22 @@ $$\begin{align}
 
 The same cardinality of the sets of $B_i$ regardless of the value of $i$ is a example of uniform partitioning. Instead of counting all paths separately we can group each path by definitive characteristics (like downturn location on the x-axis) and construct a bijection. This principle is coined the  Chung-Feller theorem but was originally introduced by MacMahon in 1909[^7]. 
 
-**Generalized Catalan Numbers**
+**Generalized Catalan Numbers** <br />
 If $a = kb$  we can see the generalized form of Catalan numbers called k-Catalan numbers, 
 
 $$\begin{align}
 C^k_n = \frac{1}{kn+1}\binom{(k+1)n}{n}.
 \end{align}$$
 
-### Variation 3
-3. What if I completely scrap the restrictive inequality such that I only care that the last two drinks are green and pink?
+## Variation 3.
+- What if I completely scrap the restrictive inequality such that I only care that the last two drinks are green and pink?
 
 <figure style="display: flex; flex-direction: column; align-items: center;">
   <img src="/assets/2025_04_17/restrict.png" alt="restrict" width="380">
   <figcaption>Figure 8: The restricted 6x6 grid </figcaption>
 </figure>
 
-This problem lets us step away from the ballot theorem to look at some good old lattice walks. If we assume equal number of cans per flavor, let's say six, then we know that we must reach coordinate $(5, 5)$. We are restricted by the the $(5,5)$ grid where we can take five steps up (green can) or 5 steps horizontally (pink can). It's a simple scenario of how many ways we can order the five steps vertically or horizontally. Hence the number of valid drinking permutations is given as, 
+This problem lets us step away from the Ballot theorem to look at some good old lattice walks. If we assume equal number of cans per flavor, let's say six, then we know that we must reach coordinate $(5, 5)$. We are restricted by the the $(5,5)$ grid where we can take five steps up (green can) or 5 steps horizontally (pink can). It's a simple scenario of how many ways we can order the five steps vertically or horizontally. Hence the number of valid drinking permutations is given as, 
 
 $$\begin{align}
 \binom{p+g}{p} = \binom{10}{5} = 252.

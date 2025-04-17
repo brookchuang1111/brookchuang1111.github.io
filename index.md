@@ -60,8 +60,6 @@ My roommates and I finished all 8 seasons in approximately 2 months. This show w
   </div>
 </div>
 
-
-
 <hr>
 ## Life at a Glimpse
 <!-- First set of 3 images -->
@@ -110,6 +108,5 @@ My roommates and I finished all 8 seasons in approximately 2 months. This show w
   </div>
   
 </div>
-<br />
 <hr>
 
