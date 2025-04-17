@@ -253,7 +253,7 @@ $$\begin{align}
 \frac{p-g}{p+g}\binom{p+g}{p} = \frac{1}{12}\binom{12}{6} = 77.
 \end{align}$$
 
-## Variation 1.
+## Variation 1
 - What if I loosened the inequality to $\mathcal{P} \geq \mathcal{G}$? 
 
 Assuming we have the *same number of cans for each flavor*, let's say six, then the loosened inequality lets us touch but not cross the line $\mathcal{G} = \mathcal{P}$ from under. Therefore counting valid paths is just a process of counting all Dyck paths on the grid. Hence we can use a Catalan number and our number of drinking permutations is, 
@@ -313,7 +313,7 @@ $$\begin{align}
 
 While this observation seems redundant, this gives us an algebraic understanding of the Weak Ballot theorem and further strengthens our intuition of Dyck paths and Catalan numbers. 
 
-## Variation 2. 
+## Variation 2 
 - What if I drank multiple green cans per visit to the fridge?  
 
 **Generalized Ballot Theorem** <br />
@@ -389,7 +389,7 @@ $$\begin{align}
 C^k_n = \frac{1}{kn+1}\binom{(k+1)n}{n}.
 \end{align}$$
 
-## Variation 3.
+## Variation 3
 - What if I completely scrap the restrictive inequality such that I only care that the last two drinks are green and pink?
 
 <figure style="display: flex; flex-direction: column; align-items: center;">
