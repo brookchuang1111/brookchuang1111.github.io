@@ -54,9 +54,9 @@ My roommates and I finished all 8 seasons in approximately 2 months. This show w
   <h4 style="margin-bottom: 6px;">2025 Reading Goal Progress</h4>
   <div style="width: 100%;">
     <div style="background-color: #eee; border-radius: 6px; height: 18px; width: 100%;">
-      <div style="background-color: #76c7c0; height: 100%; width: 56%; border-radius: 6px;"></div>
+      <div style="background-color: #76c7c0; height: 100%; width: 40%; border-radius: 6px;"></div>
     </div>
-    <p style="font-size: 0.9em; margin-top: 6px; text-align: left;">14 of 25 books read</p>
+    <p style="font-size: 0.9em; margin-top: 6px; text-align: left;">14 of 50 books read</p>
   </div>
 </div>
 
