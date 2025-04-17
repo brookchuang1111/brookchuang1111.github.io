@@ -5,9 +5,7 @@ tags: Bandits
 ---
 ## Beware of Bandits! Stochastic Bandits and Their Assumptions 
 
-(Edit 4/10/25: This is an old post and honestly is pretty shit, but I'm attached so I can't archive it.)
-
-The research I'm currently doing under UCLA's math department heavily revolves around stochastic bandits and related algorithms.
+The research I'm currently doing with UCLA's math department heavily revolves around stochastic bandits and related algorithms.
 
 Much of what I synthesize comes from the holy grail text some affectionately coin as the [*Bandit Bible*](https://banditalgs.com). Written by Tor Lattimore and Csaba Szepesvari, this textbook is widely regarded as as a ground up manual and gateway into bandits research.  
 
@@ -26,10 +24,7 @@ Much of what I synthesize comes from the holy grail text some affectionately coi
   </div>
 </div>
 
-
-
 #### Definition: Stochastic Bandits 
-
 A stochastic bandit is a collection of distributions $\mathcal{v} = (P_a:a \in \mathcal{A})$, where $\mathcal{A}$ is the set of available actions. In this environment, we have two players: the learner and the environment. In this ecosystem the following actions and states exist: 
 
 * In an environment there are $t$ rounds such that $t \in \{ 1, \dots, n \}$.
@@ -39,9 +34,9 @@ A stochastic bandit is a collection of distributions $\mathcal{v} = (P_a:a \in \
 * This interaction between learner and environment induces a probability measure on a sequence of outcomes $A_1, X_1, \dots, A_n, X_n$.
 
 We also impose some assumptions on our environment: 
-1. The conditional distribution of reward $X_t$ given our sequence of outcomes is $P_{A_t}$. Intuitively this makes sense as we sample our reward from $P_{A_t}$ in some round $t$.
+* The conditional distribution of reward $X_t$ given our sequence of outcomes is $P_{A_t}$. Intuitively this makes sense as we sample our reward from $P_{A_t}$ in some round $t$.
   
-2. Our action $A_t$  the player chooses from $\mathbb{R}$ is $\pi_t ( \cdot \| A_1, X_1, \dots, A_{t-1}, X_{t-1})$ [^1]. $\pi_t$ where $t \in \{ 1, \dots, n \}$ is the sequence of probability kernels that characterize the learner.
+* On action $A_t$ the player chooses from $\mathbb{R}$ is $\pi_t ( \cdot \| A_1, X_1, \dots, A_{t-1}, X_{t-1})$ [^1]. $\pi_t$ where $t \in \{ 1, \dots, n \}$ is the sequence of probability kernels that characterize the learner.
 
 $\pi_t$ is essentially the function that provides the probability distribution over $A_t$ given some past action sequence $A_1, X_1, \dots, A_{t-1}, X_{t-1}$. Think of $\pi_t$ as the describing function that characterizes how the learner decides on an action at round $t$ based on historical rounds. 
 
@@ -51,7 +46,7 @@ $\pi_t$ is essentially the function that provides the probability distribution o
 
 Like any good self-optimizing student, the goal of the learner is to maximize the reward $X_t$ across the horizon $n$. This is a random quantity that depends on the interaction between the environment and player and interestingly enough is NOT an optimization problem. Why?
 
-1. Maximizing rewards is a process built on incomplete information. We don't know the value of $n$ rounds we will need.
+1.  Maximizing rewards is a process built on incomplete information. We don't know the value of $n$ rounds we will need.
 2. Our reward value itself is random.
 3. Our distributions that govern each reward is unknown.
 
@@ -82,18 +77,14 @@ The regret of policy $\pi$ on bandit instance $\mathcal{v}$ is
 $$\tag{1.2}
 R_n(\pi, \mathcal{v}) = n\mu*(\mathcal{v}) - \mathbb{E}[\sum_{t=1}^{n}X_t]$$
 
-The regret after $n$ time steps over the policy $\pi$ and bandit instance $\mathcal{v}$ is
+Therefore, the regret after $n$ time steps over the policy $\pi$ and bandit instance $\mathcal{v}$ is:
 * $\mu*(\mathcal{v})$: the *optimal reward term*
 * $\mathbb{E}[\sum_{t=1}^{n}X_t]$: the *total expected reward*
 
-Here's some boring stuff I have to include because... *math*.
-
-
 **Lemma 1.3**
-
 * $R_n(\pi, \mathcal{v}) \geq 0$ for all policies $\pi$
-* the policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
-* if $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
+* The policy $\pi$ choosing $A_t \in argmax_a\mu_a$ for all $t$ satisfies $R_n(\pi, \mathcal{v}) = 0$
+* If $R_n(\pi, \mathcal{v}) = 0$ for some $\pi$ then $\mathbb{P}(\mu_{A_t} = \mu*) = 1 \forall t \in [n]$
 
 
 
@@ -106,20 +97,18 @@ T_a(t) = \sum_{s=1}^{t}I(A_s = a)$$
 
 We interpret $T_a(t)$ as the number of times action $a$ is chosen by the learner after the end of round $t$. $A_t$ inherits randomness from past observational randomness. 
 
-Now let's look at the dependence of the various quantities of policy $\pi$ and the environment $\mathcal{v}$ is suppressed seen in Lemma 1.4. 
-
+Now let's look at the dependence of the various quantities of policy $\pi$ and the environment $\mathcal{v}$ is suppressed.  
 
 **Lemma 1.4**
-
-For any policy $\pi$ and stochastic bandit environment $\mathcal{v}$ with countable $\mathcal{A}$ and horizon $n \in \mathbb{N}$ the regret $R_n$ of policy $\pi$ in $\mathcal{v}$ satisfies,
+For any policy $\pi$ and stochastic bandit environment $\mathcal{v}$ with countable $\mathcal{A}$ and horizon $n \in \mathbb{N}$, the regret $R_n$ of policy $\pi$ in $\mathcal{v}$ satisfies
 
 $$\tag{1.4}
 R_n= \sum_{a \in \mathcal{A}} \triangle _a \mathbb{E}{[}T_a(n){]}$$
 
-This regret decomposition decomposes regret in terms of loss due to using each of the arms. This tells us that to keep the regret small the learned should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
+This decomposition decomposes regret in terms of loss by using each of the arms. This tells us that to keep the regret small the learner should aim to use an arm with a larger suboptimality gap fewer times (sorta like "learning from its mistakes"). For the most optimal arm, suboptimality gaps are zero. 
 
 ---
-Now you know the bare bones of stochastic bandits! From how we formally define bandits to the introduction of decomposing regret, we can now explore more complex and accurate algorithms and their bounds, as well as create new bounds with different environments and bandit parameters.
+Now you know the bare bones of stochastic bandits! From how we formally define bandits to the introduction of decomposing regret, we can now explore more complex and accurate algorithms and their bounds as well as create new bounds with different environments and bandit parameters.
 
 [^1]: This dot represents a variable on which the probability distribution is defined. We replace this with any given specific action. 
 [^2]: The utility of a function is the outcome of our probability distribution (ie. our preference for one reward over the other).

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Drinking Symmetrically: A study on Catalan numbers"
-tags: Math 
+title: "Drinking Symmetrically: A Study on Catalan Numbers"
+tags: [Math] 
 ---
-## Not That One! 
-
+# Drinking Symmetrically: A Study on Catalan Numbers
+## Not That One!
 Over winter break, I opened the kitchen fridge to see, on the middle shelf to the left, two lines of LaCroix. The left most can was a guava while the flavor besides it was key lime. I certainly knew my choice, but as I reached towards my preferred flavor (key lime of course), I heard a screech in my ear. 
 
 *"Don't pick that one!"*
@@ -38,13 +38,13 @@ And herein I introduce the topic of this post - a stupid real life application o
   
 For a simple combinatorics exercise, let's calculate the total number of sequences without any restrictions. Let's say I have six green cans $(\mathcal{G})$ and six pink cans $(\mathcal{P})$. Drawing all 12 is a permutation of uniquely ordering either the six cans in $\mathcal{G}$ or $\mathcal{P}$. Therefore the total number of ways to arrange these is with a simple 12 choose 6, 
 
-$$
-\text{Total Sequences } = {12\choose6} = \frac{12!}{6!6!} = 924. 
-$$
+$$\begin{align}
+\text{Total Sequences } = \binom{12}{6} = \frac{12!}{6!6!} = 924. 
+\end{align}$$
 
 To aid our journey of solving our LaCroix problem, it's useful to be able to geometrically visualize our permutations. Without further ado, let me introduce lattice walks. 
 
-### Lattice Walks 
+## Lattice Walks 
 Our counting of total sequences can be visualized with a lattice walk where each step (reaching for a drink) represents either or of a flavor. This can be visualized by a 6x6 grid for our six green and six pink cans where moving horizontally represents choosing $\mathcal{P}$ while moving vertically represents choosing $\mathcal{G}$. Counting such lattice walks so we reach $(6, 6)$ (or any arbitrary cartesian point we assign to each grid intersection) is represented by how many ways we can travel right $x$ times and up $y$ times. Our linear line $y=x$ represents the balanced count between flavors; each vertex of our path touching the line symbolizes equal counts of pink and green cans for that given step. 
 
 <figure style="display: flex; flex-direction: column; align-items: center;">
@@ -62,7 +62,7 @@ A Dyck path is a lattice path that doesn't cross the lime of $y = x$ from below.
 
 In addition to Dyck paths I'll introduce some propositions that you'll convince yourself are factual; you can take my word for it or look at this heinous 113 long slide deck [^2]. 
 
-**Lemma 1.** For any $m$ and $n$ there are ${{m+n}\choose{m}}$ lattice paths from $(0,0)$ to $(m, n)$ in the mxn grid. 
+**Lemma 1.** For any $m$ and $n$ there are $\binom{m+n}{m}$ lattice paths from $(0,0)$ to $(m, n)$ in the mxn grid.
 
 *Proof.* We can easily see this by flattening the dimensionality of the problem. Imagine the sum $m+n$ as a row of slots. In each slot we have six green and six pink chips to enter in any particular order. Hence for any six green chips the complement of the other six pink chips in inevitable. Hence 12 choose 6. 
 
@@ -89,16 +89,20 @@ Now we're ready to dive into Catalan numbers.
 
 **Definition 1. Catalan numbers.** 
 Catalan numbers are given by the formula,   
-$$C_n = {{2n} \choose n} - {{2n} \choose {n-1}}$$
+
+$$\begin{align}
+C_n = \binom{2n}{n} - \binom{2n}{n+1}
+\end{align}$$
 
 Other forms include:
-$$
-C_n = \frac{1}{n+1}{{2n} \choose n} \\\text{  }
-\\
-= \frac{1}{2n+1}{{2n + 1} \choose n} 
-$$
 
-*Proof.* $C_n$ counts the number of lattice paths that do not cross $y=x$ on the nxn grid. From our previous exploration we know there are ${{2n} \choose n}$ total paths with the number of'bad' paths in the nxn grid bijecting onto the skewed $(n-1)$x$(n+1)$ grid. We therefore can measure 'bad' paths as the total amount of paths in the $(n-1)$x$(n+1)$ grid. 
+$$\begin{align}
+C_n = \frac{1}{n+1}\binom{2n}{n} \\\text{ }
+\\ 
+= \frac{1}{2n+1}\binom{2n+1}{n} 
+\end{align}$$ 
+
+*Proof.* $C_n$ counts the number of lattice paths that do not cross $y=x$ on the nxn grid. From our previous exploration we know there are $\binom{2n}{n}$ total paths with the number of'bad' paths in the nxn grid bijecting onto the skewed $(n-1)$x$(n+1)$ grid. We therefore can measure 'bad' paths as the total amount of paths in the $(n-1)$x$(n+1)$ grid. 
 
 Hence $C_n =$ {number of total paths} - {number of bad paths}, reaching our decomposition of $C_n$. In summary we combined the principles of counting symmetry and the skewed grid bijection to decompose Catalan numbers as the subtraction of the total number paths with the total number of 'bad' paths. 
 
@@ -131,19 +135,20 @@ C.  Ballot sequences are sequences where 1 is never behind (in count) of -1
   
 We can show that A = B by bijection, and B = C by bijection,  then A = C. Hence we can show ballot sequences are counted by Catalan numbers. 
 
-### Parenthesization
+## Parenthesization
 Now we can introduce parenthesization, a way for us to model hierarchies and nested structures to help us count more efficiently that are also counted by Catalan numbers [^4]. 
 
 **Definition 3.** A parenthesization is an insertion of $n-1$ open parentheses and $n-1$ close parentheses such that the resulting expression involves products of two adjacent things at a time. 
 
 An example of this can be seen with the term 'abcd'. With $n=4$ we have 3 sets of parentheses that allow us to subset the statement like,
-$$
+
+$$\begin{align}
 (a)(b)(cd) \\
 ((ab)(cd)) \\
 (a(bc))(d) \\
 ((ab)c)(d) \\
 (a(b(cd))).
-$$
+\end{align}$$
 
 It all connects back I promise! Because these parentheses are - as you probably guessed - Dyck paths where each right and left parentheses corresponds to a horizontal movement and a letter a vertical one. A example can be seen in the statement 'abcdef' mapped onto a 6x6 grid with the parenthesization of $(a((bc)d))(ef)$, 
 
@@ -164,7 +169,7 @@ Desire Andre produced a combinatorics proof for $k=1$ downturns (under the gener
 
 While Andre's proof has no geometric reasoning, we'll use a combination of both Andre's symmetry logic to sketch out the Andre-Reflection Method. 
 
-### The Andre-Reflection Method 
+## The Andre-Reflection Method 
 Think back to Proposition 1. where we state that the lattice paths in a nxn grid that cross the line $y=x$ are in bijection with the lattice paths in the $(n-1)$ x $(n+1)$ grid. In essence we're mapping a bad path (one where $b > a$, crossing $b = a$) to a good path onto a different grid that semantically still represent an unbalanced outcome.  
 
 <figure style="display: flex; flex-direction: column; align-items: center;">
@@ -188,10 +193,10 @@ By reflecting the bad ballot sequence at point $p$ where it crosses $b=a$, we re
 Hence the bad paths with different starts are symmetric; starting with either candidate essentially leads to the same problem given symmetry, so by subtracting the bad paths with a multiplier of 2 (for $(\mathcal{A})$ and $(\mathcal{B})$ starts) we achieve the solution to the ballot problem.
 
 **Solution. The Ballot Theorem**
-$$
-{{a + b}\choose {a}} - 2{{a + b -1} \choose a} = \frac{a-b}{a+b}{{a+b}\choose a}.
-$$
 
+$$\begin{align}
+\binom{a+b}{a} - 2\binom{a + b -1}{a} = \frac{a-b}{a+b}\binom{a+b}{a}.
+\end{align}$$ 
 
 ## Back to the LaCroix Problem
 Finally! Let's answer our problem statement and variants. 
@@ -201,35 +206,40 @@ Finally! Let's answer our problem statement and variants.
 
 Our original problem statement hinges on the condition of always having two unique drink flavors left from the original six. Given $\mathcal{P} > \mathcal{G}$, we can directly apply the generalized ballot theorem where the number permutations is, assuming I only drink one at a given instance,
 
-$$
-\frac{p-g}{p+g}{{p+g}\choose p} = \frac{0}{12}{{12}\choose 6} = 0.
-$$
+$$\begin{align}
+\frac{p-g}{p+g}\binom{p+g}{p} = \frac{0}{12}\binom{12}{6} = 0.
+\end{align}$$ 
 
 **Catalan Numbers**
 Weird, but this actually makes a lot of sense. If we want two unique flavors for the last two cans we need the previous draw to balance the count ie. reach $(5, 5)$ on our grid. This isn't possible with our inequality constraint of $\mathcal{P} > \mathcal{G}$, hence we have 0 valid permutations. 
 
 If we had a mismatched number of cans, lets say six pink and 5 green, then the number of drink permutations is given as, 
 
-$$
-\frac{p-g}{p+g}{{p+g}\choose p} = \frac{1}{12}{{12}\choose 6} = 77.
-$$
+$$\begin{align}
+\frac{p-g}{p+g}\binom{p+g}{p} = \frac{1}{12}\binom{12}{6} = 77.
+\end{align}$$
 
-### Variation 1.
+## Variation 1.
 1. What if I loosened the inequality to $\mathcal{P} \geq \mathcal{G}$? 
 
 Assuming we have the *same number of cans for each flavor*, let's say six, then the loosened inequality lets us touch but not cross the line $\mathcal{G} = \mathcal{P}$ from under. Therefore counting valid paths is just a process of counting all Dyck paths on the grid. Hence we can use a Catalan number and our number of drinking permutations is, 
 
-$$C_6 = {{12} \choose 6} - {{12} \choose {5}}\\= 132.$$
+$$\begin{align}
+C_6 = \binom{12}{6} - \binom{12}{7} = 132.
+\end{align}$$
 
 **The Weak Ballot Theorem** 
 If we had *different numbers of cans* per flavor our approach is different such that we use the weak ballot theorem. Any ballot permutation where $a$ maintains at least $b$ can be converted to the traditional ballot theorem where $\mathcal{A} > \mathcal{B}$ by simply appending a vote for $\mathcal{A}$ at the beginning of the permutation[^5]. Therefore the weak ballot theorem is the same as the "strict" version when $\mathcal{A}$ receives $a+1$ votes and $\mathcal{B}$ receives $b$ votes, 
-$$ $$
-$$
-\frac{a-b + 1}{a+b + 1}{{a+b + 1}\choose a + 1} = \frac{a-b + 1}{a+1}{{a+b}\choose a}
-$$
+
+$$\begin{align}
+\frac{a-b + 1}{a+b + 1}\binom{a+b + 1}{a + 1} = \frac{a-b + 1}{a+1}\binom{a+b}{a}
+\end{align}$$ 
+
 If we have six pink cans and five green cans given $\mathcal{P} \geq \mathcal{G}$, our number of valid permutations becomes, 
-$$\frac{6-5 + 1}{6+1}{{6+5}\choose 6} = 132.
-$$
+
+$$\begin{align}
+\frac{6-5 + 1}{6+1}\binom{6+5}{6} = 132.
+\end{align}$$ 
 
 **A Map from Strong to Weak**
 This sorcery would surely resurrect another witch burning! But just as it seems, the reason why the ballot theorem has such a nice closed form solution is because of its inherent bijection with constrained lattice paths.
@@ -257,13 +267,13 @@ In other words each unique valid weak path is mapped to a unique strong path by 
 **Catalan Numbers Revisited** 
 Why does our number of drink permutations for unequal counts among flavors match the instance when we have the same number of drinks for each flavor counted by $C_6$? It's a coincidence in value, but not in structure. If we let $a=b=n$ for $\mathcal{A} \geq \mathcal{B}$ we also find that our weak ballot theorem is generalized by a Catalan number, 
 
-$$
-\frac{a-b + 1}{a+1}{{a+b}\choose a} = \frac{1}{n+1}{{2n}\choose n} = C_n. 
-$$
+$$\begin{align}
+\frac{a-b + 1}{a+1}\binom{a+b}{a} = \frac{1}{n+1}\binom{2n}{n} = C_n. 
+\end{align}$$ 
 
 While this observation seems redundant, this gives us an algebraic understanding of the weak ballot theorem and further strengthens our intuition of Dyck paths and Catalan numbers. 
 
-### Variation 2. 
+## Variation 2. 
 2. What if I drank multiple green cans per visit to the fridge?  
 
 **Generalized Ballot Theorem**
@@ -276,14 +286,16 @@ Hence for each candidate step we have,
 - $\mathcal{B}$ downturn: $(1, -k)$ 
 
 Let $B_0, \dots, B_k$ represent the number of bad paths where $B_i$ is a path that lands exactly $i$ units below the x-axis. These sets are disjoint and their union $B_0 \cup \dots \cup B_k$ is the collection of all bad paths. $B_k$ is all paths that start with a downturn where the first step lands $k$ units below the x-axis. Therefore, if we let the x-axis denote $\mathcal{A}$ and the y-axis $\mathcal{B}$, we can see that the number of $B_k$ paths is the total $a+b$ subtracted by the first initial step, hence $a+b-1$. It follows that $B_k$ is, 
-$$
-|B_k| = {{a+b-1}\choose a}.
-$$
+
+$$\begin{align}
+|B_k| = \binom{a+b-1}{a}.
+\end{align}$$ 
 
 Interestingly enough we can show for $k \neq i$ that 
-$$
+
+$$\begin{align}
 |B_k| = |B_i|.
-$$
+\end{align}$$
 
 <figure style="display: flex; flex-direction: column; align-items: center;">
   <img src="/assets/2025_04_17/general.png" alt="general" width="380">
@@ -293,32 +305,44 @@ $$
 To prove this let $P$ be the path in $B_i$ where $k \neq i$ and $X$ the initial segment of P that ends $i$ units below the x-axis. Let path $P=XY$ where $Y$ is the rest of the path not including $X$. Let $\tilde{X}$ represent the path that results from rotating $X$ 180 degrees. Given $X$ ends with a downturn $\tilde{X}$ starts with a downturn. 
 
 Our new rotated path of $\tilde{X}Y \in B_k$. We can reverse this process from $B_k$ to $B_i$ but in any case, we model a bijection where 
-$$
-|B_i| = |B_k| = {{a+b-1}\choose a}.
-$$
+
+$$\begin{align}
+|B_i| = |B_k| = \binom{a+b-1}{a}.
+\end{align}$$
+
 Given there are $k+1$ such bad path sets given $0 \leq i \leq k$ we have 
 
-$$
-(k+1){{a+b-1}\choose a}.
-$$
+$$\begin{align}
+(k+1)\binom{a+b-1}{a}.
+\end{align}$$
 
 Subtracting good paths from bad paths we finally achieve 
-$$
-{{a+b-1}\choose a} - (k+1){{a+b-1}\choose a} = \frac{a-kb}{a+b}{{a+b} \choose a}. 
-$$
+
+$$\begin{align}
+\binom{a+b}{a} - (k+1)\binom{a+b-1}{a} = \frac{a-kb}{a+b}\binom{a+b}{a}. 
+\end{align}$$
 
 Applied to our problem statement let us assume we take two green cans ($k=2$) at a given time given 12 pink and five green cans. Our total number of drinking permutations such that $\mathcal{P} > k\mathcal{G}$ is,
-$$
-\frac{a-kb}{a+b}{{a+b} \choose a} = \frac{12-(2)5}{12+5}{{12+5} \choose 12} = 728. 
-$$
+
+$$\begin{align}
+\frac{a-kb}{a+b}\binom{a+b}{a} = \frac{12-(2)5}{12+5}\binom{12+5}{12} = 728. 
+\end{align}$$
 
 **Uniform Partitioning** 
 It can be shown that 
-$$
-|B_0| = \dots = |B_k| = {{a+b-1}\choose a}.
-$$
 
-The same cardinality of the sets of $B_i$ regardless of the value of $i$ is a example of uniform partitioning. Instead of counting all paths separately we can group each path by definitive characteristics (like downturn location on the x-axis) and construct a bijection. This principle is coined the  Chung-Feller theorem but was originally introduced by MacMahon in 1909[^7].  
+$$\begin{align}
+|B_0| = \dots = |B_k| =  \binom{a+b-1}{a}.
+\end{align}$$ 
+
+The same cardinality of the sets of $B_i$ regardless of the value of $i$ is a example of uniform partitioning. Instead of counting all paths separately we can group each path by definitive characteristics (like downturn location on the x-axis) and construct a bijection. This principle is coined the  Chung-Feller theorem but was originally introduced by MacMahon in 1909[^7]. 
+
+**Generalized Catalan Numbers**
+If $a = kb$  we can see the generalized form of Catalan numbers called k-Catalan numbers, 
+
+$$\begin{align}
+C^k_n = \frac{1}{kn+1}\binom{(k+1)n}{n}.
+\end{align}$$
 
 ### Variation 3
 3. What if I completely scrap the restrictive inequality such that I only care that the last two drinks are green and pink?
@@ -328,15 +352,17 @@ The same cardinality of the sets of $B_i$ regardless of the value of $i$ is a ex
   <figcaption>Figure 8: The restricted 6x6 grid </figcaption>
 </figure>
 
-This problem lets us step away from the ballot theorem to look at some good old lattice walks. If we assume equal number of cans per flavor, let's say six, then we know that we must reach coordinate $(5, 5)$. We are restricted by the the $(5,5)$ grid where we can take five steps up (green can) or 5 steps horizontally (pink can). It's a simple scenario of how many ways we can order the five steps vertically or horizontally. Hence the number of valid drinking permutations is given as,   
-$$
-{{p+g}\choose{p}} = {{10}\choose{5}} = 252.
-$$ 
+This problem lets us step away from the ballot theorem to look at some good old lattice walks. If we assume equal number of cans per flavor, let's say six, then we know that we must reach coordinate $(5, 5)$. We are restricted by the the $(5,5)$ grid where we can take five steps up (green can) or 5 steps horizontally (pink can). It's a simple scenario of how many ways we can order the five steps vertically or horizontally. Hence the number of valid drinking permutations is given as, 
+
+$$\begin{align}
+\binom{p+g}{p} = \binom{10}{5} = 252.
+\end{align}$$ 
 
 Even if our number of drinks per flavor differ we can still use our strategy. If we have six pink and five green cans we must reach the coordinates $(5, 4)$. Therefore our valid drinking paths can be represented as,
-$$
-{{p+g}\choose{p}} = {{9}\choose{5}} = 126. 
-$$
+
+$$\begin{align}
+\binom{p+g}{p} = \binom{9}{5} = 126. 
+\end{align}$$
 
 ## Conclusions 
 Well well well... what a great exercise of free will. Trust humans to make something as simple as counting so pedantic. 
@@ -348,7 +374,7 @@ Safe to say this post had me feeling like:
 
 Next steps? Maybe I'll dabble in chords or triangulations - those seem stupidly fun. Heck I might even take a look into knot theory; it'll be fun to tell my friends I'm studying something that'll acquire me a girl scout badge. 
 
-
+---
 
 [^1]: ["Catalan Numbers, Their Generalization, and Their Uses" Pedersen. Hilton.](https://www.math.uakron.edu/~cossey/636papers/hilton%20and%20pedersen.pdf)
 

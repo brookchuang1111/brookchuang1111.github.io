@@ -30,16 +30,6 @@
   <script type="text/javascript" src="{{ "/js/highlightjs/languages/tsql.min.js" | relative_url }}"></script>
   <script type="text/javascript">hljs.highlightAll();</script>
 
-  <!-- MathJax support -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    });
-  </script>
-
   <!-- Additional styles -->
   <style>
     body, header {
@@ -52,4 +42,16 @@
       font-weight: bold; /* Keep the title bold */
     }
   </style>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>

@@ -3,22 +3,36 @@ layout: page
 title: Blog Posts
 ---
 
-<a href="/archive-date.html">Sort by date</a>
+{% assign priority_tags_raw = "Math" %}
+{% assign priority_tags = priority_tags_raw | split: "," %}
 
+
+<!-- Show prioritized tags first -->
+{% for priority_tag in priority_tags %}
+  {% assign normalized_tag = priority_tag | strip | downcase %}
+  {% for tag in site.tags %}
+    {% assign tag_name = tag[0] | downcase %}
+    {% if tag_name == normalized_tag %}
+      <h3>{{ tag[0] }}</h3>
+      <ul>
+        {% for post in tag[1] %}
+          <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<!-- Show the rest of the tags that weren’t prioritized -->
+{% assign normalized_priority_tags = priority_tags | join: "," | downcase | split: "," %}
 {% for tag in site.tags %}
-<h3>{{- tag[0] -}}</h3>
-<ul>
-  {%- for post in tag[1] %}
-  <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
-  {%- endfor %}
-</ul>
-{%- endfor %}
-
-<!-- Commented out until there are posts under the 'personal' tag
-<h3>Personal</h3>
-<ul>
-  {%- for post in site.personal %}
-  <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
-  {%- endfor %}
-</ul>
--->
+  {% assign tag_name = tag[0] | downcase %}
+  {% unless normalized_priority_tags contains tag_name %}
+    <h3>{{ tag[0] }}</h3>
+    <ul>
+      {% for post in tag[1] %}
+        <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endunless %}
+{% endfor %}
