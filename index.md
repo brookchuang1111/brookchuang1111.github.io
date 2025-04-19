@@ -1,4 +1,4 @@
- # babbling
+> ## babbling
 > */bab(ə)liNG/*
 >
 > *adjective*
@@ -13,8 +13,7 @@
 
 Hello world! I'm Brook and per my blog's name welcome to my inner ramblings. <br />
 Topics include but are not limited to pop culture, books, math, trading, ect. <br /><br />
-Warning: This blog serves as a personal notebook -- full of half-baked ideas, vibe code, and questionable logic. 
-<br /><br />Proceed with caution and thanks for visiting! <br />
+Proceed with caution and thanks for visiting! <br />
 
 <hr>
 ## Fresh Off the Press!
