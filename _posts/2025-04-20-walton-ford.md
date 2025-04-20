@@ -4,9 +4,9 @@ title: "Walton Ford's World: Delirium of Animal and Man"
 tags: [Art] 
 ---
 # Walton Ford's World: Delirium of Animal and Man
-It was a wolf about to bite a man. A large black body that covered the canvas with a pale limb in the corner, enticing the jaws of the beast to sever it completely off the limb. 
-
 I felt the beast’s stance in my throat - felt the tension of his hind legs in my jaw. 
+
+It was a wolf about to bite a man. A large black body that covered the canvas with a pale limb in the corner, enticing the jaws of the beast to sever it completely off the limb. 
 
 What I saw on the 59x119 canvas was Fenrir, the Norse demon wolf trapped by the magical chain Gleipnir. His mouth is open to receive his captor’s hand in a landscape rendered in watercolor and gouache, signed at the bottom as “Walton Ford”. 
 
