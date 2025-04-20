@@ -3,36 +3,36 @@ layout: page
 title: Blog Posts
 ---
 
-{% assign priority_tags_raw = "Math,Market Microstructure" %}
-{% assign priority_tags = priority_tags_raw | split: "," %}
+{% assign tag_objects = "" | split: "" %}
 
+<!-- Build array of tags with sortable datetime -->
+{% for tag in site.tags %}
+  {% assign sorted_posts = tag[1] | sort: "date" %}
+  {% assign latest_post = sorted_posts | last %}
+  {% assign sortable_datetime = latest_post.date | date: "%Y-%m-%d %H:%M:%S" %}
+  {% assign tag_info = sortable_datetime | append: "|||" | append: tag[0] %}
+  {% assign tag_objects = tag_objects | push: tag_info %}
+{% endfor %}
 
-<!-- Show prioritized tags first -->
-{% for priority_tag in priority_tags %}
-  {% assign normalized_tag = priority_tag | strip | downcase %}
+<!-- Sort descending by full datetime -->
+{% assign sorted_tags = tag_objects | sort | reverse %}
+
+<!-- Render each tag section -->
+{% for tag_obj in sorted_tags %}
+  {% assign parts = tag_obj | split: "|||" %}
+  {% assign tag_label = parts[1] %}
   {% for tag in site.tags %}
-    {% assign tag_name = tag[0] | downcase %}
-    {% if tag_name == normalized_tag %}
+    {% if tag[0] == tag_label %}
       <h3>{{ tag[0] }}</h3>
       <ul>
         {% for post in tag[1] %}
-          <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
+          <li>
+            <a href="{{ post.url }}">
+              {{ post.date | date: "%b %Y" }} - {{ post.title }}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     {% endif %}
   {% endfor %}
-{% endfor %}
-
-<!-- Show the rest of the tags that weren’t prioritized -->
-{% assign normalized_priority_tags = priority_tags | join: "," | downcase | split: "," %}
-{% for tag in site.tags %}
-  {% assign tag_name = tag[0] | downcase %}
-  {% unless normalized_priority_tags contains tag_name %}
-    <h3>{{ tag[0] }}</h3>
-    <ul>
-      {% for post in tag[1] %}
-        <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endunless %}
 {% endfor %}

@@ -21,7 +21,12 @@ Proceed with caution and thanks for visiting! <br />
 ## [{{ latest_post.title }}]({{ latest_post.url }})  
 *Published on {{ latest_post.date | date: "%B %d, %Y" }}*
 <hr>
-
+<!---Images-->
+<figure style="display: flex; flex-direction: column; align-items: center;">
+  <img src="/assets/index_images/tiger_walton.png" alt="jja" width="650">
+  <figcaption>Walton Ford, Chay, 2021</figcaption>
+</figure>
+<hr>
 ## Currents 
 *Jersey Mike's Jersey Shore Favorite:*
 I don't know if they imbued this sandwich with crack but it was the most scrum-dilly-uptious thing I have ever had the pleasure of consuming. No notes. I went to Trader Joe's the next day to make a poor mans version.
@@ -31,12 +36,13 @@ My roommates and I finished all 8 seasons in approximately 2 months. This show w
 
 *Emma, Jane Austen:*
 “I cannot make speeches, Emma...If I loved you less, I might be able to talk about it more. But you know what I am. You hear nothing but truth from me. I have blamed you, and lectured you, and you have borne it as no other woman in England would have borne it.” I mean... what more do I need to say. 
+
 <hr>
 <h2>Book Tracker</h2>
 <div style="display: flex; justify-content: space-around; margin-bottom: 20px; text-align: center; gap: 10px;">
   <div style="flex: 1;">
     <h3 style="margin-bottom: 4px; font-size: 1.1em;">Total Books Read</h3>
-    <p style="font-size: 1.5em; font-weight: bold; margin: 0;">📚 742</p>
+    <p style="font-size: 1.5em; font-weight: bold; margin: 0;">📚 744</p>
   </div>
   <div style="flex: 1;">
     <h3 style="margin-bottom: 4px; font-size: 1.1em;">Books Read in 2025</h3>
