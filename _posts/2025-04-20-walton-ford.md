@@ -8,7 +8,7 @@ I felt the beast’s stance in my throat - felt the tension of his hind legs in 
 
 It was a wolf about to bite a man. A large black body that covered the canvas with a pale limb in the corner, enticing the jaws of the beast to sever it completely off the limb. 
 
-What I saw on the 59x119 canvas was Fenrir, the Norse demon wolf trapped by the magical chain Gleipnir. His mouth is open to receive his captor’s hand in a landscape rendered in watercolor and gouache, signed at the bottom as “Walton Ford”. 
+What I saw on the 59x119 canvas was Fenrir, the Norse demon wolf trapped by the magical chain Gleipnir. His mouth is open to receive his captor’s hand in a landscape rendered in watercolor and gouache, signed at the bottom “Walton Ford”. 
 
 <!---Images-->
 <figure style="display: flex; flex-direction: column; align-items: center; padding-top: 20px; padding-bottom: 20px;">
@@ -22,7 +22,7 @@ In hopes of bringing his genius with me, I went to CVS to print *Delirium* (2004
 
 *“Oh so your room is going to be hunting themed?”*
 
-No you cretin, it is not. Safe to say they sorely misunderstood the subject, so I relocated the posters to my childhood bedroom for the pleasure of more discerning eyes. 
+No you cretin, it is not. Safe to say they sorely misunderstood the subject, so I relocated the poster to my childhood bedroom for the pleasure of more discerning eyes. 
 
 But for the more perspicacious reader, it would be my honor to introduce the history, background, and interpretations of *Delirium* (2004), and why it represents such a piece of brilliance to me. 
 
@@ -76,7 +76,7 @@ While working on the painting of the dead pinned golden eagle, Audubon was “su
   <figcaption style="width: 300px; text-align: center;">Figure 4. John James Audubon. Courtesy of the New York Historical Society</figcaption>
 </figure>
 
-## The Descent into Delirium 
+## The Descent Into Delirium 
 In *Delirium* (2004), painted by Walton Ford, we see the same bald eagle from Audubon’s illustrations. Her chest heaves from the metal spike driven into her heart and she chokes on the noxious fumes of charcoal and sulfur from the shed. Yet, even chained onto her perch, she is free from death. On the bottom left we see a rendition of Audubon lying on the snowy ground. He is dead, supposedly succumbing to the stroke that almost took his life in 1833. 
 
 <!---Images-->

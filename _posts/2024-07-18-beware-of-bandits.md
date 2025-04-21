@@ -19,7 +19,7 @@ Much of what I synthesize comes from the holy grail text some affectionately coi
 
   <div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
-    <img src="{{ '/assets/post_assets/bandit.JPG' | relative_url }}" style="width: 100%; height: 300px; object-fit: cover;">
+    <img src="/assets/post_assets/Bandit.jpg" style="width: 100%; height: 300px; object-fit: cover;">
     <p>A different kind of "Bandit"</p>
   </div>
 </div>
