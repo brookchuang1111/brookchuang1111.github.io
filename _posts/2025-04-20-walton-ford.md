@@ -4,11 +4,9 @@ title: "Walton Ford's World: Delirium of Animal and Man"
 tags: [Art] 
 ---
 # Walton Ford's World: Delirium of Animal and Man
-I felt the beast’s stance in my throat - felt the tension of his hind legs in my jaw. 
+I feel the beast’s stance in my throat - I feel the tension of his hind legs in my spine. 
 
-It was a wolf about to bite a man. A large black body that covered the canvas with a pale limb in the corner, enticing the jaws of the beast to sever it completely off the limb. 
-
-What I saw on the 59x119 canvas was Fenrir, the Norse demon wolf trapped by the magical chain Gleipnir. His mouth is open to receive his captor’s hand in a landscape rendered in watercolor and gouache, signed at the bottom “Walton Ford”. 
+Fenrir's large black body covers the canvas while a pale limb in the corner entices the jaws of the beast to sever it completely off the limb. He is bound by a silky pink ribbon called Gleipnir, whose strength seems inconsequential next to the hulking figure of the animal. 
 
 <!---Images-->
 <figure style="display: flex; flex-direction: column; align-items: center; padding-top: 20px; padding-bottom: 20px;">
@@ -16,9 +14,11 @@ What I saw on the 59x119 canvas was Fenrir, the Norse demon wolf trapped by the 
   <figcaption style="width: 400px; text-align: center;">Figure 1. Gleipnir, 2012 watercolor, gouache, ink, pencil on paper. Painting by Walton Ford courtesy of the Kasmin Gallery</figcaption>
 </figure>
 
-This was my first introduction to Ford’s work and it’s safe to say he has become one of my favorite artists, capturing naturalist narratives with spins of mythology and the unusual. His art is vivid and fantastical, pushing the viewer to find the storyline embedded into his subjects. 
+The painting is both mythic and unsettling, blurring the line between predator and prey, reality and fable. This tension lies at the heart of Walton Ford’s piece *Gleipnir*, where the fantastical collides with naturalist narratives for a spin of the unusual. 
 
-In hopes of bringing his genius with me, I went to CVS to print *Delirium* (2004), a vertical painting of a bald eagle in flight, to hang in my apartment room for the upcoming school year. When my roommates inquired what my room theme was going to be, I ecstatically showed them the poster of the bird. 
+For the American artist Walton Ford, this is commonplace. Ford's art is vivid and wild, pushing the viewer to find the storyline embedded into his subjects. His landscapes seems to grapple with the confines of their canvas, exhibiting  the punishing nature of animal order and unabashed pride for the untamed. 
+
+Selfishly, in hopes of bringing some of his genius with me, I had went to CVS to print out a selection of his work before the start of junior year. My favorite out of the set, *Delirium* (2004), was a vertical painting of a bald eagle in flight, intended to hang in my room above my desk. When my roommates inquired about my selection of posters, I ecstatically showed them the poster of the bird. 
 
 *“Oh so your room is going to be hunting themed?”*
 
