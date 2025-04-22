@@ -18,7 +18,7 @@ What I saw on the 59x119 canvas was Fenrir, the Norse demon wolf trapped by the 
 
 This was my first introduction to Ford’s work and it’s safe to say he has become one of my favorite artists, capturing naturalist narratives with spins of mythology and the unusual. His art is vivid and fantastical, pushing the viewer to find the storyline embedded into his subjects. 
 
-In hopes of bringing his genius with me, I went to CVS to print *Delirium* (2004), one of my favorite works from the artist, to hang in my apartment room for the upcoming school year. When my roommates inquired what my room theme was going to be, I ecstatically showed them the poster of the eagle. 
+In hopes of bringing his genius with me, I went to CVS to print *Delirium* (2004), a vertical painting of a bald eagle in flight, to hang in my apartment room for the upcoming school year. When my roommates inquired what my room theme was going to be, I ecstatically showed them the poster of the bird. 
 
 *“Oh so your room is going to be hunting themed?”*
 
