@@ -80,7 +80,7 @@ As a house warming present last year our apartment kitchen sink decided it had e
 <!-- First set of 3 images -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
-    <img src="assets/index_images/legal.JPG" style="width: 100%; height: 250px; object-fit: cover;">
+    <img src="assets/index_images/legal.jpg" style="width: 100%; height: 250px; object-fit: cover;">
     <p>In adherence to the National Minimum Drinking Age Act of 1984</p>
   </div>
   <div style="text-align: center;">
