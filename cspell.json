@@ -1,0 +1,16 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+    ],
+    "enableFiletypes": [
+        "markdown"
+    ],
+    "files": [
+        "**/*.md"
+    ],
+    "ignorePaths": [
+        "_site/**",
+        "node_modules/**"
+    ]
+}

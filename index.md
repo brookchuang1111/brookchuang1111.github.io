@@ -13,7 +13,9 @@
 
 Hello world! I'm Brook and per my blog's name welcome to my inner ramblings. <br />
 Topics include but are not limited to pop culture, books, math, trading, ect. <br /><br />
-Proceed with caution and thanks for visiting! <br />
+Proceed with caution and thanks for visiting!<br />
+<br />
+[Last update: October 2025]<br />
 
 <hr>
 ## Fresh Off the Press!
@@ -23,34 +25,34 @@ Proceed with caution and thanks for visiting! <br />
 <hr>
 <!---Images-->
 <figure style="display: flex; flex-direction: column; align-items: center;">
-  <img src="/assets/index_images/tiger_walton.png" alt="jja" width="650">
-  <figcaption>Walton Ford, Chay, 2021</figcaption>
+  <img src="/assets/index_images/cabeza_walton.png" alt="jja" width="650">
+  <figcaption>Walton Ford, Cabeza de Vaca, 2021</figcaption>
 </figure>
 <hr>
 ## Currents 
-*Jersey Mike's Jersey Shore Favorite:*
-I don't know if they imbued this sandwich with crack but it was the most scrum-dilly-uptious thing I have ever had the pleasure of consuming. No notes. I went to Trader Joe's the next day to make a poor mans version.
+*Great British Bake Off:*
+Soggy bottom. Stodgy. Style over substance. All phrases I could describe myself with at this given moment in time. There's a certain camaraderie when you watch a bunch of underdogs thrown into a stuffy tent crashing out over their crème pât that makes it both entertaining to watch and a commentary on the aubsurdism of life.
 
-*Game of Thrones:* 
-My roommates and I finished all 8 seasons in approximately 2 months. This show was... absolutely insane; Rosh and I were GAGGED when we watched Baelor and the Red Wedding and I fear I lost my mind when Ed Sheeran came on screen. I also can't stop saying "Brienne of Tarth!" and am still salty about Lord Varys' character arc. 
+*Aggressively Making Birthday Cards:* 
+A couple weeks ago I was convinced I was the next Martha Stewart in the making and my crafting empire was on the come up. Um...safe to say I got bored after the first two cards and ditched the effort. 
 
-*Emma, Jane Austen:*
-“I cannot make speeches, Emma...If I loved you less, I might be able to talk about it more. But you know what I am. You hear nothing but truth from me. I have blamed you, and lectured you, and you have borne it as no other woman in England would have borne it.” I mean... what more do I need to say. 
+*Fingerless Gloves:*
+As a house warming present last year our apartment kitchen sink decided it had enough and burst all the backed up contents of the sink disposal (of multiple apartments) onto our kitchen floor (twice). Now, the AC has decided that the LA sunshine is not for her and has made the apartment an icy tundra fit for hell. To type on my computer to get anything done consists of me wearing fingerless gloves. We need a rent discount. 
 
 <hr>
 <h2>Book Tracker</h2>
 <div style="display: flex; justify-content: space-around; margin-bottom: 20px; text-align: center; gap: 10px;">
   <div style="flex: 1;">
     <h3 style="margin-bottom: 4px; font-size: 1.1em;">Total Books Read</h3>
-    <p style="font-size: 1.5em; font-weight: bold; margin: 0;">📚 744</p>
+    <p style="font-size: 1.5em; font-weight: bold; margin: 0;">📚 745</p>
   </div>
   <div style="flex: 1;">
     <h3 style="margin-bottom: 4px; font-size: 1.1em;">Books Read in 2025</h3>
-    <p style="font-size: 1.5em; font-weight: bold; margin: 0;">📅 14</p>
+    <p style="font-size: 1.5em; font-weight: bold; margin: 0;">📅 20</p>
   </div>
   <div style="flex: 1;">
     <h3 style="margin-bottom: 4px; font-size: 1.1em;">Want to Read</h3>
-    <p style="font-size: 1.2em; font-style: italic; margin: 0;">"These Old Shades" by Georgette Heyer</p>
+    <p style="font-size: 1.2em; font-style: italic; margin: 0;">"The Stranger" by Albert Camus</p>
   </div>
 </div>
 
@@ -61,21 +63,29 @@ My roommates and I finished all 8 seasons in approximately 2 months. This show w
     <div style="background-color: #eee; border-radius: 6px; height: 18px; width: 100%;">
       <div style="background-color: #76c7c0; height: 100%; width: 40%; border-radius: 6px;"></div>
     </div>
-    <p style="font-size: 0.9em; margin-top: 6px; text-align: left;">14 of 50 books read</p>
+    <p style="font-size: 0.9em; margin-top: 6px; text-align: left;">20 of 50 books read</p>
   </div>
 </div>
+
+<hr>
+<!---Images-->
+<figure style="display: flex; flex-direction: column; align-items: center;">
+  <img src="/assets/index_images/tiger_walton.png" alt="jja" width="650">
+  <figcaption>Walton Ford, Chay, 2021</figcaption>
+</figure>
+
 
 <hr>
 ## Life at a Glimpse
 <!-- First set of 3 images -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
-    <img src="assets/index_images/when_in_austin.JPG" style="width: 100%; height: 250px; object-fit: cover;">
-    <p>When in Austin (bad decisions are made)</p>
+    <img src="assets/index_images/legal.JPG" style="width: 100%; height: 250px; object-fit: cover;">
+    <p>In adherence to the National Minimum Drinking Age Act of 1984</p>
   </div>
   <div style="text-align: center;">
-    <img src="assets/index_images/carrots.jpg"   style="width: 100%; height: 250px; object-fit: cover;">
-    <p>Rotund carrots spotted at Brentwood Farmers Market</p>
+    <img src="assets/index_images/veggie_sammy.jpg"   style="width: 100%; height: 250px; object-fit: cover;">
+    <p>A very scrummy veggie sammy</p>
   </div>
   <div style="text-align: center;">
     <img src="assets/index_images/oscars_whores.jpg" style="width: 100%; height: 250px; object-fit: cover;">
@@ -100,12 +110,12 @@ My roommates and I finished all 8 seasons in approximately 2 months. This show w
 <!-- Third set of 3 images (page break) -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
   <div style="text-align: center;">
-    <img src="assets/index_images/waterfall.jpg" style="width: 100%; height: 250px; object-fit: cover;">
-    <p>Hike at Gould Park in Santa Barbara</p>
+    <img src="assets/index_images/mango_bingsu.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    <p>Homemade mango bingsu</p>
   </div>
   <div style="text-align: center;">
-    <img src="assets/index_images/cat.JPEG"  style="width: 100%; height: 250px; object-fit: cover;">
-    <p>Oskar the demon tuxedo cat</p>
+    <img src="assets/index_images/waterfall.jpg"  style="width: 100%; height: 250px; object-fit: cover;">
+    <p>Hike at Gould Park in Santa Barbara</p>
   </div>
   <div style="text-align: center;">
     <img src="assets/index_images/texas_bbq.JPG" style="width: 100%; height: 250px; object-fit: cover;">
