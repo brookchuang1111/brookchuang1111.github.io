@@ -119,7 +119,7 @@ As a house warming present last year our apartment kitchen sink decided it had e
   </div>
   <div style="text-align: center;">
     <img src="assets/index_images/texas_bbq.JPG" style="width: 100%; height: 250px; object-fit: cover;">
-    <p>Terry Black's: It's sacrilege how good this was</p>
+    <p>Terry Black's (it is sacrilege how good this was)</p>
   </div>
   
 </div>
